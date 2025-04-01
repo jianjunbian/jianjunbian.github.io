@@ -1,11 +1,13 @@
 Dislocation helix
 =================
 
-.. |helix|  image:: img/helix.png
-   :width: 200px 
-   :align: bottom 
+.. image:: img/helices.png
+   :height: 400px 
+   :align: center 
 
-|helix|
+.. raw:: html
+
+   <div style="text-align: center;"><i>Dislocation helices with uniform radius (left) and with linearly varying radius (right).</i></div>
 
 --------
 
@@ -13,7 +15,7 @@ To create a dislocation helix,
 
 **Step 1:**
 
-  Use the tool in subdirectory :doc:`tools/Bcc <Tools>` to creat a BCC single crystal sample: ``bcc_reg.lmp``, use the shell script in subdirectory :doc:`Tool/Helical_surface <Tools>` to create the mesh of a helical surface: ``mesh.dat``;
+  Use the tool in subdirectory :doc:`tools/Bcc <Tools>` to creat a BCC single crystal sample: ``bcc_reg.lmp``, use the tool in subdirectory :doc:`Tool/Helical_surface <Tools>` to create the mesh of a helical surface: ``mesh.dat``;
 
 **Step 2:**
 
