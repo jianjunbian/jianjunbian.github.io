@@ -70,7 +70,7 @@ Parameter tags
    :linenos:
 
    #dislocation loop
-   nLoop   1             # number of dislocaito loops
+   nLoop   1             # number of dislocation loop
    Loop                  # label of a dislocation section
    -bv     1  1  1       # orientation of Burgers vector
    -bs     1/3           # scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2<110>
