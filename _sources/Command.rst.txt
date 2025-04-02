@@ -29,19 +29,19 @@ Counter tags
 ------------
 
 .. note::
-   Counter tags in CryDisGen’s parameter file specify the number of dislocation objects to be generated using a following integer. There are **Three** counter tags: **nLoop**, **nTetrahedron** and **nHelix**. These tags are only required when the associated the dislocation instances are configured, and can be put anywhere in the parameter file. The integer value following each counter tag must mathc the number of indication tags; otherwies, code will exit with an error.
+   Counter tags in CryDisGen’s parameter file specify the number of dislocation objects to be generated using a following integer. There are **Three** counter tags: **nLoop**, **nTetrahedron** and **nHelix**. These tags are only required when the associated the dislocation instances are configured, and can be put anywhere in the parameter file. The integer value following each counter tag must match the number of indication tags; otherwies, code will exit with an error.
 
 **nLoop N:**
 
-The counter tag **nLoop** specifies the number, **N**, of dislocation loop sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) indicating how many **Loop** sections follow in the file.
+The counter tag **nLoop** specifies the number **N** of dislocation loop sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) indicating how many **Loop** sections follow in the file.
 
 **nTetrhedron N:**
 
-The counter tag **nTetrahedron** specifies the number, **N**, of stacking fault tetrahedron sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) that indicates how many **Tetrahedron** sections follow in the file. It can be abbreviated as **nTetra N**. 
+The counter tag **nTetrahedron** specifies the number **N** of stacking fault tetrahedron sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) that indicates how many **Tetrahedron** sections follow in the file. It can be abbreviated as **nTetra N**. 
 
 **nHelix N:**
 
-The counter tag **nHelix** specifies the number, **N**, of stacking fault tetrahedron to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) that indicates how many **Tetrahedron** sections follow.
+The counter tag **nHelix** specifies the number **N** of stacking fault tetrahedron to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) that indicates how many **Tetrahedron** sections follow.
 
 
 Parameter tags
