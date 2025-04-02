@@ -39,7 +39,7 @@ User Guide
 
 .. raw:: html
 
-   <div style="text-align: center;"><i> Core structures of screw dislocations in single cryst    al FCC aluminum (left) and BCC niobium (right).</i></div>
+   <div style="text-align: center;"><i> Core structures of screw dislocations in single crystal FCC aluminum (left) and BCC niobium (right).</i></div>
 
 
 .. toctree::
