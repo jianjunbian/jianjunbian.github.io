@@ -116,11 +116,15 @@
 <p>The data files contains a header section and a body section. Typically, the first line is a comment that provides some explainations of the file. The header section specifies the overall informaiton of the crystal structure, such as the number of atoms (line 3), the number of atom types (line 4), and the extent of the atomic region (line 6 ~ 8). The body section begins with keywords like <code class="docutils literal notranslate"><span class="pre">Masses</span></code> (line 10), <code class="docutils literal notranslate"><span class="pre">Atoms</span></code> (line 14). The <code class="docutils literal notranslate"><span class="pre">Masses</span></code> subsection defines the atomic weight of each atom type (line 12), the <code class="docutils literal notranslate"><span class="pre">Atoms</span></code> subsection consists of lines detailing individual atom information (line 16 ~ end of file). For a data file of the <code class="docutils literal notranslate"><span class="pre">atomic</span></code> type, the per-atom values have thes meanings and units as follows:</p>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p>atomic</p></td>
+<tr class="row-odd"><td><p><em>Type of the crystal file</em>:</p></td>
+<td><p><em>Atomic items per-line</em>:</p></td>
+</tr>
+<tr class="row-even"><td><p>atomic</p></td>
 <td><p>atom-ID atom-type x y z</p></td>
 </tr>
 </tbody>
 </table>
+<p><em>Description</em>:</p>
 <ul class="simple">
 <li><p>atom-ID = integer ID of atom</p></li>
 <li><p>atom-type = type of atom (1-Ntype, or type label)</p></li>
