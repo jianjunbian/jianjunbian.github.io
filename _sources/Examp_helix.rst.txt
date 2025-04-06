@@ -2,7 +2,7 @@ Dislocation helix
 =================
 
 .. image:: img/helices.png
-   :height: 400px 
+   :width: 70% 
    :align: center 
 
 .. raw:: html
