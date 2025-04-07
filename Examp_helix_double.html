@@ -142,6 +142,28 @@
 <span class="linenos">18</span><span class="n">-bvh</span>   1  1  1
 <span class="linenos">19</span><span class="n">-bsh</span>   1/2
 <span class="linenos">20</span><span class="n">-f</span>     mesh1.dat
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c">#dislocation</span>
+<span class="linenos">23</span> <span class="k">nLoop</span>    2            <span class="c"># number of dislocaito loops</span>
+<span class="linenos">24</span> <span class="k">Loop</span>                  <span class="c"># label of a dislocation section</span>
+<span class="linenos">25</span> <span class="n">-bv</span>     1 1 1         <span class="c"># orientation of Burgers vector</span>
+<span class="linenos">26</span> <span class="n">-bs</span>     -1/2          <span class="c"># scalar coefficient of Burgers vector, e.g., 1/2 in: [110]/2</span>
+<span class="linenos">27</span> <span class="n">-dnorm</span>  1 -1 0        <span class="c"># normal direction of plane with dislocation loop</span>
+<span class="linenos">28</span> <span class="n">-dc</span>     0 25 0        <span class="c"># center of dislocation loop</span>
+<span class="linenos">29</span> <span class="n">-dr</span>     25            <span class="c"># radius of dislocaiton loop of half of the edge of square loop</span>
+<span class="linenos">30</span> <span class="n">-lx</span>     1  1 -2       <span class="c"># local x axis on slip plane</span>
+<span class="linenos">31</span> <span class="n">-ly</span>     1  1  1       <span class="c"># local y axis on slip plane</span>
+<span class="linenos">32</span> <span class="n">-ndisl</span>  4  2.7        <span class="c"># segments of a discretized dislocation loop</span>
+<span class="linenos">33</span>
+<span class="linenos">34</span> <span class="k">Loop</span>
+<span class="linenos">35</span> <span class="n">-bv</span>     1 1 1
+<span class="linenos">36</span> <span class="n">-bs</span>     1/2
+<span class="linenos">37</span> <span class="n">-dnorm</span>  1 -1 0
+<span class="linenos">38</span> <span class="n">-dc</span>     0 -25 0
+<span class="linenos">39</span> <span class="n">-dr</span>     25
+<span class="linenos">40</span> <span class="n">-lx</span>     1  1 -2
+<span class="linenos">41</span> <span class="n">-ly</span>     1  1  1
+<span class="linenos">42</span> <span class="n">-ndisl</span>  4  2.7
 </pre></div>
 </div>
 </section>
