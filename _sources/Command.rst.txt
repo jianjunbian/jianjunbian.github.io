@@ -1,4 +1,4 @@
-Tags in Paramater file
+Tags in Parameter file
 ======================
 
 The parameter file uses **tags** to configure CryDisGen: **indication tags** (*Region, Loop, Tetrahedron, Helix*) specify the atom region or dislocation type, **counter tags** (*nTetrahedron, nLoop, nHelix*) define the number of dislocation objects, and **parameter tags** (e.g., *-x, -bv*) set detailed properties.
