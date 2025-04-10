@@ -84,7 +84,7 @@ Parameter tags
 .. important::
    Here, the local coordination system *xoy* on the dislocation plane is set by 
    the parameter tags '-lx, -ly', and is used to change the in-plane orientation of 
-   dislocaiton. If this is unnecessary in your case, the vectors 
+   dislocation. If this is unnecessary in your case, the vectors 
    following the tages can be simply set to 'Null/null' as what follows. Note that
    the 'Null/null' value should be used at the same time for tags '-lx, -ly'. Otherwise,
    code will exit with an error.
@@ -119,7 +119,7 @@ Parameter tags
 
    #dislocation helix
    nHelix  1             # number of dislocation helix
-   Helix                 # lable of dislocation helix
+   Helix                 # label of dislocation helix
    -bvh    1  1  1       # orientation of the Burgers vector of helix
    -bsh    1/2           # scalar coefficient of the Burgers vector 
    -f      mesh0.dat     # mesh of helical surface
