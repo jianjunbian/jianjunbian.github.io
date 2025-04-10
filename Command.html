@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6. Tags in Parameter file &mdash; CryDisGen beta documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8451b935" />
 
@@ -152,6 +152,19 @@
 <span class="linenos">11</span><span class="n">-ndisl</span>  4             <span class="c"># segments of a discretized dislocation loop</span>
 </pre></div>
 </div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Here, the local coordination system <em>xoy</em> on the dislocation plane is set by
+the parameter tags ‘-lx, -ly’, and is used to change the in-plane orientation of
+dislocaiton. If this is unnecessary in your case, the vectors
+following the tages can be simply set to ‘Null/null’ as what follows. Note that
+the ‘Null/null’ value should be used at the same time for tags ‘-lx, -ly’. Otherwise,
+code will exit with an error.</p>
+</div>
+<div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">-lx</span>      Null
+<span class="linenos">2</span><span class="n">-ly</span>      Null
+</pre></div>
+</div>
 <p><strong>Tetrahedron:</strong></p>
 <div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c">#stacking fault tetrahedrion</span>
 <span class="linenos">2</span><span class="k">nTetrahedron</span> 1        <span class="c"># number of stacking fault tetrahedron</span>
@@ -165,7 +178,7 @@
 </div>
 <p><strong>Helix:</strong></p>
 <div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c">#dislocation helix</span>
-<span class="linenos">2</span><span class="k">nHelix</span>  1             <span class="c"># number dislocation helix</span>
+<span class="linenos">2</span><span class="k">nHelix</span>  1             <span class="c"># number of dislocation helix</span>
 <span class="linenos">3</span><span class="k">Helix</span>                 <span class="c"># lable of dislocation helix</span>
 <span class="linenos">4</span><span class="n">-bvh</span>    1  1  1       <span class="c"># orientation of the Burgers vector of helix</span>
 <span class="linenos">5</span><span class="n">-bsh</span>    1/2           <span class="c"># scalar coefficient of the Burgers vector</span>

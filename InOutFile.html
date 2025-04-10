@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>4. Input and output files &mdash; CryDisGen beta documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8451b935" />
 
@@ -52,7 +52,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Usage.html">3. Usage</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Input and output files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ParaFile.html">5. Parameter file</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Command.html">6. Tags in Paramater file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Command.html">6. Tags in Parameter file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">7. Tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Example.html">8. Examples</a></li>
 </ul>
@@ -91,25 +91,25 @@
 <p>To seamlessly interact with <code class="docutils literal notranslate"><span class="pre">LAMMPS</span></code>, both the input and output crystal files of <code class="docutils literal notranslate"><span class="pre">CryDisGen</span></code> adopt the same structure as data file recognized by the <a class="reference external" href="https://docs.lammps.org/read_data.html">read_data</a> command in <code class="docutils literal notranslate"><span class="pre">LAMMPS</span></code>. Detailed information on the data file format can be found in the official document of <a class="reference external" href="https://docs.lammps.org/read_data.html">LAMMPS</a></p>
 <p>Since <code class="docutils literal notranslate"><span class="pre">CryDisGen</span></code> is designed to work with crystal structures, only the data file of <code class="docutils literal notranslate"><span class="pre">atomic</span></code> type, as illustrated in <a class="reference external" href="https://docs.lammps.org/read_data.html">LAMMPS</a>, needs to be considered. Below is an example of such a data file:</p>
 <blockquote>
-<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>LAMMPS<span class="w"> </span>description
+<div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>LAMMPS description
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="m">156321</span><span class="w"> </span>atoms
-<span class="linenos"> 4</span><span class="m">1</span><span class="w"> </span>atom<span class="w"> </span>types
+<span class="linenos"> 3</span><span class="m">156321</span> atoms
+<span class="linenos"> 4</span><span class="m">1</span> atom types
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span>-61.348560<span class="w"> </span><span class="m">61</span>.348560<span class="w"> </span>xlo<span class="w"> </span>xhi
-<span class="linenos"> 7</span>-61.348560<span class="w"> </span><span class="m">61</span>.348560<span class="w"> </span>ylo<span class="w"> </span>yhi
-<span class="linenos"> 8</span>-61.455000<span class="w"> </span><span class="m">61</span>.455000<span class="w"> </span>zlo<span class="w"> </span>zhi
+<span class="linenos"> 6</span>-61.348560 <span class="m">61</span>.348560 xlo xhi
+<span class="linenos"> 7</span>-61.348560 <span class="m">61</span>.348560 ylo yhi
+<span class="linenos"> 8</span>-61.455000 <span class="m">61</span>.455000 zlo zhi
 <span class="linenos"> 9</span>
 <span class="linenos">10</span>Masses
 <span class="linenos">11</span>
-<span class="linenos">12</span><span class="m">1</span><span class="w"> </span><span class="m">63</span>.546000
+<span class="linenos">12</span><span class="m">1</span> <span class="m">63</span>.546000
 <span class="linenos">13</span>
 <span class="linenos">14</span>Atoms
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-58.789203<span class="w"> </span>-61.341863<span class="w"> </span>-61.449694
-<span class="linenos">17</span><span class="m">2</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-61.345336<span class="w"> </span>-61.342109<span class="w"> </span>-61.449910
-<span class="linenos">18</span><span class="m">3</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-61.345233<span class="w"> </span>-58.785847<span class="w"> </span>-61.449741
-<span class="linenos">19</span><span class="m">4</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-60.067113<span class="w"> </span>-60.063673<span class="w"> </span>-59.642199
+<span class="linenos">16</span><span class="m">1</span> <span class="m">1</span> -58.789203 -61.341863 -61.449694
+<span class="linenos">17</span><span class="m">2</span> <span class="m">1</span> -61.345336 -61.342109 -61.449910
+<span class="linenos">18</span><span class="m">3</span> <span class="m">1</span> -61.345233 -58.785847 -61.449741
+<span class="linenos">19</span><span class="m">4</span> <span class="m">1</span> -60.067113 -60.063673 -59.642199
 <span class="linenos">20</span>...
 </pre></div>
 </div>

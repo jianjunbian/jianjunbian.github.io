@@ -81,6 +81,22 @@ Parameter tags
    -ly     1  1 -2       # local y axis on slip plane 
    -ndisl  4             # segments of a discretized dislocation loop
 
+.. important::
+   Here, the local coordination system *xoy* on the dislocation plane is set by 
+   the parameter tags '-lx, -ly', and is used to change the in-plane orientation of 
+   dislocaiton. If this is unnecessary in your case, the vectors 
+   following the tages can be simply set to 'Null/null' as what follows. Note that
+   the 'Null/null' value should be used at the same time for tags '-lx, -ly'. Otherwise,
+   code will exit with an error.
+      
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   -lx      Null 
+   -ly      Null
+
+
 **Tetrahedron:**
 
 .. code-block:: CryDisGen
@@ -102,7 +118,7 @@ Parameter tags
    :linenos:
 
    #dislocation helix
-   nHelix  1             # number dislocation helix
+   nHelix  1             # number of dislocation helix
    Helix                 # lable of dislocation helix
    -bvh    1  1  1       # orientation of the Burgers vector of helix
    -bsh    1/2           # scalar coefficient of the Burgers vector 
