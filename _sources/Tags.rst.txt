@@ -1,0 +1,133 @@
+Tags in Parameter file
+======================
+
+The parameter file uses **tags** to configure CryDisGen: **indication tags** (*Region, Loop, Tetrahedron, Helix*) specify the atom region or dislocation type, **counter tags** (*nTetrahedron, nLoop, nHelix*) define the number of dislocation objects, and **parameter tags** (e.g., *-x, -bv*) set detailed properties.
+
+Indication tags
+---------------
+
+.. note::
+   Indication tags in CryDisGen’s parameter file supply the information of the input atomic region or define dislocation objects being configured. There are **Four** indication tags in current version: **Region**, **Loop**, **Tetrahedron** and **Helix**. These tags specify either the input atom region (e.g., the crystal lattice) or the type of dislocation object to be introduced (e.g., a loop or tetrahedron), providing the structural context for subsequent counter and parameter tags. Each tag initiates a block of settings that CryDisGen uses to construct the corresponding atomic-scale feature.
+
+**Region:**
+
+It has no trailing parameter on the same line and indicates the following block of parameter tags defines the input atomic region. This section provides some additional parameters for the atomic region. In the parameter file, only one **Region** tag and its associated block is required. If multiple **Region** tags are included, code will exit with an error. If multiple blocks are present, the last one will override any previous ones, ensuring a single, final definition of the crystal region.
+
+**Loop:**
+
+It has no trailing parameters on the same line and indicates the following block of parameter tags defines a dislocation loop. In the parameter file, each dislocation loop instance corresponds to an independent **Loop** tag with its associated block of parameter tags. Multiple dislocation loops can be included in a single parameter file, and there is no limitation to their number.    
+
+**Tetrahedron:**
+
+It has no trailing parameter on the same line and indicates the following block of parameter tags defines a stacking fault tetrahedron. In the parameter file, **Tetrahedron** can be abbreviated as **Tetra**. Each stacking fault tetrahedron corresponds to an independent **Tetrahedron** tag with its associated block of parameter tags. Multiple stacking fault tetrahedrons can be included in a single parameter file, and there is no limitation to their number. 
+
+**Helix:**
+
+It has no trailing parameter on the same line and indicates the following block of parameter tags defines a dislocation helix. In the parameter file, each dislocation helix corresponds to an indipendent **Helix** tag with its associated block of parameter tags. Multiple dislocation helices can be included in a single parameter file, and there is no limitation to their numer.
+
+Counter tags
+------------
+
+.. note::
+   Counter tags in CryDisGen’s parameter file specify the number of dislocation objects to be generated using a following integer. There are **Three** counter tags: **nLoop**, **nTetrahedron** and **nHelix**. These tags are only required when the associated the dislocation instances are configured, and can be put anywhere in the parameter file. The integer value following each counter tag must match the number of indication tags; otherwies, code will exit with an error.
+
+**nLoop N:**
+
+The counter tag **nLoop** specifies the number **N** of dislocation loop sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) indicating how many **Loop** sections follow in the file.
+
+**nTetrhedron N:**
+
+The counter tag **nTetrahedron** specifies the number **N** of stacking fault tetrahedron sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) that indicates how many **Tetrahedron** sections follow in the file. It can be abbreviated as **nTetra N**. 
+
+**nHelix N:**
+
+The counter tag **nHelix** specifies the number **N** of stacking fault tetrahedron sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) that indicates how many **Tetrahedron** sections follow.
+
+
+Parameter tags
+--------------
+
+.. note::
+   Parameter tags in CryDisGen’s parameter file define the detailed configuration settings for the crystal region or dislocation objects specified by indication tags (*Region, Loop, Tetrahedron, Helix*). Prefixed with a hyphen (e.g., -x, -bv, -tc), these tags follow their associated indication tag and provide specific values—such as coordinates, vectors, or scalars—that CryDisGen uses to construct the atomic-scale structure. Each parameter tag is tailored to its section’s context, ensuring precise customization of the simulation model.
+
+**Region:**
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   #those started with '#' are comment lines
+   #crystal region
+   Region 
+   -x     1 -1  0        # lattice orientation in x-direction 
+   -y     1  1 -2        # lattice orientation in y-direction
+   -z     1  1  1        # lattice orientation in z-direction
+   -lat   3.615          # lattice constant
+   -pbc   1  1  1        # boundary condition flag: '1': pbc, '0': non-pbc 
+   
+**Loop:**
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   #dislocation loop
+   nLoop   1             # number of dislocation loop
+   Loop                  # label of a dislocation section
+   -bv     1  1  1       # orientation of Burgers vector
+   -bs     1/3           # scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2<110>
+   -dnorm  1  1  1       # normal direction of dislocation plane 
+   -dc     0.2 0  0      # center of dislocation loop
+   -dr     25            # radius of dislocation loop. For square shape, it is half the edge length. 
+   -lx     1 -1  0       # local x axis on slip plane 
+   -ly     1  1 -2       # local y axis on slip plane 
+   -ndisl  4             # segments of a discretized dislocation loop
+
+.. important::
+   Here, the local coordination system *xoy* on the dislocation plane is set by 
+   the parameter tags '-lx, -ly', and is used to change the in-plane orientation of 
+   dislocation. If this is unnecessary in your case, the vectors 
+   following the tages can be simply set to 'Null/null' as what follows. Note that
+   the 'Null/null' value should be used at the same time for tags '-lx, -ly'. Otherwise,
+   code will exit with an error.
+      
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   -lx      Null 
+   -ly      Null
+
+
+**Tetrahedron:**
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   #stacking fault tetrahedrion
+   nTetrahedron 1        # number of stacking fault tetrahedron
+   Tetrahedron           # label of a tetrahedron section
+   -tc      0. 0. 0.     # center of the bottom face of tetrahedron 
+   -tr      40           # radius of the circumscribe circle of the bottom face
+   -tnorm  -1 -1 -1      # outward normal direction at the bottom face of tetrahedron
+   -lxt     1 -1  0      # local x axis on the bottom face
+   -lyt    -1 -1  2      # local y axis on the bottom face
+
+
+**Helix:**
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   #dislocation helix
+   nHelix  1             # number of dislocation helix
+   Helix                 # label of a dislocation helix section
+   -bvh    1  1  1       # orientation of the Burgers vector of helix
+   -bsh    1/2           # scalar coefficient of the Burgers vector 
+   -f      mesh0.dat     # mesh of a helical surface
+
+
+.. tip::
+   The lines of tags in the parameter file can be arranged in any order. To enhancethe readability, it is recommended to group **parameter tags** defining the same dislocation instance or atomic region together into a block, placing them after the corresponding **indication and counter tags**, as illustrated in the examples above.
+
+   
+
+
