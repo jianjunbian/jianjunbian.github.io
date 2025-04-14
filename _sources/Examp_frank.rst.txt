@@ -33,7 +33,7 @@ To create a Frank partial dislocation loop,
 .. code-block:: CryDisGen
    :linenos:
 
-   #those started with '#' are comment lines
+   #those starting with '#' are comment lines
    #crystal region
    Region
    -x      1 -1  0      # lattice orientation in x-direction

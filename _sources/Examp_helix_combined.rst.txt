@@ -32,7 +32,7 @@ To create a dislocation helix combined with a loop,
 .. code-block:: CryDisGen
    :linenos:
 
-   #those started with '#' are comment lines
+   #those starting with '#' are comment lines
    #crystal region
    Region
    -x      1 -1  0      # lattice orientation in x-direction

@@ -34,7 +34,7 @@ To create a combination of different types of dislocations in FCC single crystal
 .. code-block:: CryDisGen
    :linenos:
 
-    #those started with '#' are comment lines
+    #those starting with '#' are comment lines
     #crystal region
     Region
     -x      1  0  0      # lattice orientation in x-direction
