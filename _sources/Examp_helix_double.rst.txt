@@ -27,9 +27,9 @@ To create double dislocation helices,
 
 --------
 
-.. admonition::  para_file 
+.. admonition:: Parameter file  
 
-   Content of the :doc:`Parameter file <ParaFile>`:
+   Content of the :doc:`para_file<ParaFile>`:
 
 .. code-block:: CryDisGen 
    :linenos:

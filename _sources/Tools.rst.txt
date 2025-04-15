@@ -113,7 +113,7 @@ To make the script executable, run the following command in a Terminal first:
 Parameter file for tetrahedron array 
 ------------------------------------
 
-In the ``./tools/para_file_tetrahedron_array`` diectory, a shell scrip is provided to generate the ``Parameter file`` used by ``CryDisGen``. This file enables the creating of an arra of stacking fault tetrahedrons in a FCC crysatl region, as demonstrated in `examples <Examp_array_sft>`. 
+In the ``./tools/para_file_tetrahedron_array`` diectory, a shell scrip is provided to generate the ``Parameter file`` used by ``CryDisGen``. This file enables the creating of an array of stacking fault tetrahedrons in a FCC crysatl region, as demonstrated in `examples <Examp_array_sft>`. 
 
 .. image:: img/tool7.png
    :width: 70%
