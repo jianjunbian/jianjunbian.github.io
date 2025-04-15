@@ -156,8 +156,14 @@
 <p class="admonition-title">Important</p>
 <p>Here, the local coordination system <em>xoy</em> on the dislocation plane is set by
 the parameter tags ‘-lx, -ly’, and is used to change the in-plane orientation of
-dislocation. If this is unnecessary in your case, the vectors
-following the tages can be simply set to ‘Null/null’ as what follows. Note that
+dislocation.
+A dislocation loop is approximated by an <em>N</em>-vertex equilateral polygon in geometry,
+where <em>N</em> is set by ‘-ndisl’.
+The position vector of the <em>i</em>-th vertex, where <em>i</em> = 1, 2, …, <em>N</em>, can be found by rotating
+the vector (1, 0) counterclockwise by an angle of (<em>i</em>-1)*2π/<em>N</em> in the <em>xoy</em> plane. For square-shape
+dislocation, the edges are set to parallel to axis, enabling straightforward coordinate-based calculations.
+If this is unnecessary in your case, the vectors
+following the tages ‘-lx, -ly’ can be simply set to ‘Null/null’ as what follows. Note that
 the ‘Null/null’ value should be used at the same time for tags ‘-lx, -ly’. Otherwise,
 code will exit with an error.</p>
 </div>

@@ -84,8 +84,14 @@ Parameter tags
 .. important::
    Here, the local coordination system *xoy* on the dislocation plane is set by 
    the parameter tags '-lx, -ly', and is used to change the in-plane orientation of 
-   dislocation. If this is unnecessary in your case, the vectors 
-   following the tages can be simply set to 'Null/null' as what follows. Note that
+   dislocation. 
+   A dislocation loop is approximated by an *N*-vertex equilateral polygon in geometry, 
+   where *N* is set by '-ndisl'. 
+   The position vector of the *i*-th vertex, where *i* = 1, 2, ..., *N*, can be found by rotating 
+   the vector (1, 0) counterclockwise by an angle of (*i*-1)*2π/*N* in the *xoy* plane. For square-shape
+   dislocation, the edges are set to parallel to axis, enabling straightforward coordinate-based calculations. 
+   If this is unnecessary in your case, the vectors 
+   following the tages '-lx, -ly' can be simply set to 'Null/null' as what follows. Note that
    the 'Null/null' value should be used at the same time for tags '-lx, -ly'. Otherwise,
    code will exit with an error.
       
