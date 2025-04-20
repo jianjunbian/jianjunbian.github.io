@@ -62,7 +62,7 @@ Parameter tags
    -y     1  1 -2        # lattice orientation in y-direction
    -z     1  1  1        # lattice orientation in z-direction
    -lat   3.615          # lattice constant
-   -pbc   1  1  1        # boundary condition flag along x/y/z axis: '1': pbc, '0': non-pbc 
+   -pbc   1  1  1        # boundary condition flag along x/y/z-axis: '1': pbc, '0': non-pbc 
    
 **Loop:**
 
