@@ -62,7 +62,7 @@ Parameter tags
    -y     1  1 -2        # lattice orientation in y-direction
    -z     1  1  1        # lattice orientation in z-direction
    -lat   3.615          # lattice constant
-   -pbc   1  1  1        # boundary condition flag: '1': pbc, '0': non-pbc 
+   -pbc   1  1  1        # boundary condition flag along x/y/z axis: '1': pbc, '0': non-pbc 
    
 **Loop:**
 
@@ -79,7 +79,7 @@ Parameter tags
    -dr     25            # radius of dislocation loop. For square shape, it is half the edge length. 
    -lx     1 -1  0       # local x axis on dislocation plane 
    -ly     1  1 -2       # local y axis on dislocation plane 
-   -ndisl  4             # segments of a discretized dislocation loop
+   -ndisl  4             # segments/vertices of a discretized dislocation loop
 
 .. important::
    Here, the local coordination system *xoy* on the dislocation plane is set by 

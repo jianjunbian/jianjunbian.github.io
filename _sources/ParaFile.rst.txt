@@ -15,7 +15,7 @@ It is a structured ASCII text file designed to supply configuration details for 
    -y      1  1  0      # lattice orientation in y-direction
    -z      0  0  1      # lattice orientation in z-direction
    -lat    3.615        # lattice constant
-   -pbc    1  1  1      # boundary condition flag: '1': pbc, '0': non-pbc 
+   -pbc    1  1  1      # boundary condition flag along x/y/z-axis: '1': pbc, '0': non-pbc 
 
    #stacking fault tetrahedron
    nTetrahedron  1      # number of stacking fault tetrahedron
@@ -36,7 +36,7 @@ It is a structured ASCII text file designed to supply configuration details for 
    -dr     25           # radius of dislocaiton loop
    -lx     1 -1  0      # local x axis on dislocation plane 
    -ly     1  1 -2      # local y axis on dislocation plane 
-   -ndisl  4            # segments of a discretized dislocation loop
+   -ndisl  4            # segments/vertices of a discretized dislocation loop
 
    #dislocation helix
    nHelix  1            # number of dislocation helix
