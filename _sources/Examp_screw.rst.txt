@@ -1,0 +1,79 @@
+Straight screw dislocation
+==========================
+
+.. |screw0| image:: img/screw0.png
+   :width: 48%
+
+.. |screw1| image:: img/screw1.png
+   :width: 48%
+
+|screw0| |screw1|
+
+*A straight screw dislocation is created in a single-crystal aluminum sample: the unrelaxed configuration ( left ) and the relaxed configuration ( right ). In the figures, atoms in perfect FCC lattice are not shown for clarity. White atoms are those at free surface, and red atoms are those in HCP lattice.*
+
+.. |core| image:: img/core_fcc_al_relaxed.png
+   :width: 48%
+
+|core|
+
+*The core structure of the relaxed screw dislocation in aluminum, corresponding to the atomic model in the top right figure.* 
+
+--------
+
+.. note::
+   To create a straight dislocation, one approach is to define a larger dislocation loop—at lease one dimension larger then the crystal sample—in the parameter file. By appropriately scaling and positioning the dislocation loop so that only a portion of one edge resides within the crystal domain, a straight dislocation can be successfully introduced into the sample after applying the associated displacement field of the dislocation loop. 
+
+To create a straight screw dislocation in a single-crystal aluminum sample, the following two steps are employed: 
+
+**Step 1:**
+
+  Use the tool in the subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: ``fcc_reg.lmp``.
+
+.. code-block:: Shell 
+   :linenos:
+
+   Fcc 300 300 150 -l 1 -1 0 -m 1 1 -2 -n 1 1 1 Al
+
+**Step 2:**
+
+  Open terminal, run the following command:
+
+.. code-block:: Shell 
+   :linenos:
+
+   CryDisGen para_file fcc_reg.lmp
+
+--------
+
+.. admonition::  Parameter file 
+
+   Content of the :doc:`para_file <ParaFile>`:
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   #those starting with '#' are comment lines
+   #dislocation loop is on the local xoy coordinate plane
+   #crystal region
+   Region
+   -x      1 -1  0      # lattice orientation in x-direction
+   -y      1  1 -2      # lattice orientation in y-direction 
+   -z      1  1  1      # lattice orientation in z-direction
+   -lat    4.05         # lattice constant 
+   -pbc    1  0  0      # boundary condition flag: '1': pbc, '0': non-pbc
+
+   #dislocation
+   nLoop 1
+   Loop
+   -bv     1 -1  0      # orientation of Burgers vector
+   -bs     1/2          # scaling coefficient of Burgers vector, e.g., 1/2 in [110]/2
+   -dnorm  1  1  1      # normal direction of dislocation plane
+   -dc     0 -100 0.5   # center of dislocation loop
+   -dr     200          # radius of dislocaiton loopS
+   -lx     1 -1  0      # local x axis on dislocation plane 
+   -ly     1  1 -2      # local y axis on dislocation plane 
+   -ndisl  4  0.5       # segments of a discretized dislocation loop and a scaling factor
+
+.. important::
+   In this example, the parameter tag '-ndisl' accepts two arguments. When only a single argument is specified, the resulting dislocation loop assumes a square geometry. If a second argument is provided, it serves as a scaling factor for the loop edge oriented along the direction defined by the '-ly' tag, thereby enabling the generation of rectangular loop configuration.
+

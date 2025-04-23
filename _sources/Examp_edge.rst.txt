@@ -1,0 +1,69 @@
+Straight edge dislocation
+==========================
+
+.. |edge0|  image:: img/edge0.png
+   :width: 48%
+   :align: bottom 
+.. |edge1|  image:: img/edge1.png
+   :width: 48%
+   :align: bottom 
+
+|edge0| |edge1|
+
+*A straight edge dislocation is created in a single-crystal aluminum sample: the unrelaxed configuration ( left ) and the relaxed configuration ( right ). In the figures, atoms in perfect FCC lattice are not shown for clarity. White atoms are those at free surface, and red atoms are those in HCP lattice.*
+
+--------
+
+To create a straight edge dislocation withing a single-crystal aluminum sampel, the following two steps are employed: 
+
+**Step 1:**
+
+  Use the tool in the subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: ``fcc_reg.lmp``.
+
+.. code-block:: Shell 
+   :linenos:
+
+   Fcc 300 300 150 -l 1 -1 0 -m 1 1 -2 -n 1 1 1 Al 
+
+**Step 2:**
+
+  Open terminal, run the following command:
+
+.. code-block:: Shell 
+   :linenos:
+
+   CryDisGen para_file fcc_reg.lmp
+
+--------
+
+.. admonition::  Parameter file 
+
+   Content of the :doc:`para_file <ParaFile>`:
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   #those starting with '#' are comment lines
+   #dislocation loop is on the local xoy coordinate plane
+   #crystal region
+   Region
+   -x      1 -1  0      # lattice orientation in x-direction
+   -y      1  1 -2      # lattice orientation in y-direction
+   -z      1  1  1      # lattice orientation in z-direction
+   -lat    4.05         # lattice constant 
+   -pbc    1  1  0      # boundary condition flag: '1': pbc, '0': non-pbc
+
+   #dislocation
+   nLoop 1
+   Loop
+   -bv     1 -1  0      # orientation of Burgers vector
+   -bs     1/2          # scaling coefficient of Burgers vector, e.g., 1/2 in [110]/2
+   -dnorm  1 -1  0      # normal direction of dislocation plane
+   -dc     0  0  80     # center of dislocation loop
+   -dr     180          # radius of dislocaiton loopS
+   -lx     1  1 -2      # local x axis on dislocation plane 
+   -ly     1  1  1      # local y axis on dislocation plane 
+   -ndisl  4  0.5       # segments of a discretized dislocation loop and a scaling factor
+
+.. important::
+   In this example, the parameter tag '-ndisl' accepts two arguments as well to scale the edge length of the dislocation loop along the defined direction specified by the '-ly' tag.

@@ -16,4 +16,6 @@ These pages provides a series of examples of the dislocation structures created 
    Examp_array_sft
    Examp_array_loop
    Examp_combine_diff
+   Examp_screw
+   Examp_edge
 
