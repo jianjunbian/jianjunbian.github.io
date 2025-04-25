@@ -11,12 +11,15 @@ Straight screw dislocation
 
 *A straight screw dislocation is created in a single-crystal aluminum sample: the unrelaxed configuration ( left ) and the relaxed configuration ( right ). In the figures, atoms in perfect FCC lattice are not shown for clarity. White atoms are those at free surface, and red atoms are those in HCP lattice.*
 
-.. |core| image:: img/core_fcc_al_relaxed.png
+.. |core0| image:: img/core_fcc_al_unrelaxed.png
    :width: 48%
 
-|core|
+.. |core1| image:: img/core_fcc_al_relaxed.png
+   :width: 48%
 
-*The core structure of the relaxed screw dislocation in aluminum, corresponding to the atomic model in the top right figure.* 
+|core0| |core1|
+
+*The core structures of the unrelaxed ( left) and the relaxed ( right ) screw dislocations in aluminum, corresponding to the atomic models in the top figures.* 
 
 --------
 
