@@ -19,7 +19,7 @@ Straight screw dislocation
 
 |core0| |core1|
 
-*The core structures of the unrelaxed ( left) and the relaxed ( right ) screw dislocations in aluminum, corresponding to the atomic models in the top figures.* 
+*The core structures of the unrelaxed ( left ) and the relaxed ( right ) screw dislocations in aluminum, corresponding to the atomic models in the top figures.* 
 
 --------
 

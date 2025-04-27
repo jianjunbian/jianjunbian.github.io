@@ -48,14 +48,16 @@ To create a dislocation helix combined with a loop,
    -f      mesh.dat
 
    #dislcoation
-   nLoop    1           # number of dislocaito loops
-   Loopn                # label of a dislocation section
+   nLoop    1           # number of dislocaito loop
+   Loopn                # label of a loop section
    -bv     1  1  1      # orientation of Burgers vector
    -bs    -1/2          # scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2<110>
-   -dnorm  1 -1  0      # normal direction of plane with dislocation loop
+   -dnorm  1 -1  0      # normal direction of the plane with dislocation loop
    -dc     0  25 0      # center of dislocation loop
    -dr     25           # radius of dislocaiton loop of half of the edge of square loop
-   -lx     1  1 -2      # local x axis on slip plane 
-   -ly     1  1  1      # local y axis on slip plane 
-   -ndisl  4  2.4       # segments of a discretized dislocation loop
+   -lx     1  1 -2      # local x axis on the dislocation plane 
+   -ly     1  1  1      # local y axis on the dislocation plane 
+   -ndisl  4  2.4       # segments/vertices of a discretized dislocation loop and a scaling factor
 
+.. important::
+   In this example, the parameter tag ‘-ndisl’ accepts two arguments. When only a single argument is specified, the resulting dislocation loop assumes a square geometry. If a second argument is provided, it serves as a scaling factor for the loop edge oriented along the direction defined by the ‘-ly’ tag, thereby enabling the generation of rectangular loop configuration.

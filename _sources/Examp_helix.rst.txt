@@ -45,8 +45,8 @@ To create a dislocation helix,
    -pbc   1 1 1           # boundary condition flag: '1': pbc, '0': non-pbc 
 
    #dislocation helix
-   nHelix 1
-   Helix
-   -bvh   1  1  1         # Burgers vecotr of helix
+   nHelix 1               # number of dislocation helix
+   Helix                  # label of a helix section
+   -bvh   1  1  1         # Burgers vecotr of the helix
    -bsh   1/2             # scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2<110>
-   -f     mesh.dat        # mesh of helical surface
+   -f     mesh.dat        # mesh data file of a helical surface

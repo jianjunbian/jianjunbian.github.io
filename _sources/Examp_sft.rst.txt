@@ -40,12 +40,12 @@ To create a stacking fault tetrahedron,
    -y       1  1  0      # lattice orientation in y-direction
    -z       0  0  1      # lattice orientation in z-direction
    -lat     3.615        # lattice constant
-   -pbc     1  1  1      # boundary condition flag: '1': pbc, '0': non-pbc 
+   -pbc     1  1  1      # boundary condition flag along x/y/z-axis: '1': pbc, '0': non-pbc 
 
    nTetrahedron  1       # number of stacking fault tetrahedron
-   Tetrahedron           # label of tetrahedron
-   -tc     -0. 0. 0.     # center of the bottom face of tetrahedron
+   Tetrahedron           # label of a tetrahedron section
+   -tc     -0. 0. 0.     # center of the bottom face of the tetrahedron
    -tr      40           # radius of the circumscribe circle of the bottom face
-   -tnorm  -1 -1 -1      # outward nomral direction bottom face of tetrahedron
+   -tnorm  -1 -1 -1      # outward normal direction of the bottom face 
    -lxt     1 -1  0      # local x axis on the bottom face
    -lyt    -1 -1  2      # local y axis on the bottom face

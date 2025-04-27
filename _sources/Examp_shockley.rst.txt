@@ -40,18 +40,18 @@ To create a Shockley partial dislocation loop,
    -y       0  1  0      # lattice orientation in y-direction
    -z       0  0  1      # lattice orientation in z-direction
    -lat     3.615        # lattice constant
-   -pbc     1  1  1      # boundary condition flag: '1': pbc, '0': non-pbc 
+   -pbc     1  1  1      # boundary condition flag along x/y/z-axis: '1': pbc, '0': non-pbc 
 
    #dislcoation
-   nLoop    1            # number of dislocaito loops
-   Loop                  # label of a dislocation section
+   nLoop    1            # number of dislocaito loop
+   Loop                  # label of a loop section
    -bv     -1  2 -1      # orientation of Burgers vector
-   -bs      1/6          # scalar coefficient of Burger's vector, e.g., 1/2 in: 1/2<110>
-   -dnorm   1  1  1      # normal direction of plane with dislocation loop
+   -bs      1/6          # scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2<110>
+   -dnorm   1  1  1      # normal direction of the plane with dislocation loop
    -dc      0. 0. 0      # center of dislocation loop
-   -dr      10           # radius of dislocaiton loopS
-   -lx     -1  1  0      # local x axis on slip plane 
-   -ly     -1 -1  2      # local y axis on slip plane 
-   -ndisl   3            # segments of a discretized dislocation loop
+   -dr      10           # radius of dislocaiton loop
+   -lx     -1  1  0      # local x axis on dislocation plane 
+   -ly     -1 -1  2      # local y axis on dislocation plane 
+   -ndisl   3            # segments/vertices of a discretized dislocation loop
 
 
