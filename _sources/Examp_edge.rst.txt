@@ -70,4 +70,4 @@ To create a straight edge dislocation withing a single-crystal aluminum sampel, 
    -ndisl  4  0.5       # segments of a discretized dislocation loop and a scaling factor
 
 .. important::
-   In this example, the parameter tag '-ndisl' accepts two arguments as well, and the second argument is scaling factor used to scale the edge length of the dislocation loop along the defined direction specified by the '-ly' tag.
+   In this example, the parameter tag '-ndisl' accepts two arguments as well, and the second argument is a scaling factor used to scale the edge length of the dislocation loop along the defined direction specified by the '-ly' tag.
