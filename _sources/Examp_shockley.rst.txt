@@ -49,9 +49,9 @@ To create a Shockley partial dislocation loop,
    -bs      1/6          # scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2<110>
    -dnorm   1  1  1      # normal direction of the plane with dislocation loop
    -dc      0. 0. 0      # center of dislocation loop
-   -dr      10           # radius of dislocaiton loop
+   -dr      25           # radius of dislocaiton loop
    -lx     -1  1  0      # local x axis on dislocation plane 
    -ly     -1 -1  2      # local y axis on dislocation plane 
-   -ndisl   3            # segments/vertices of a discretized dislocation loop
+   -ndisl   10           # segments/vertices of a discretized dislocation loop
 
 
