@@ -63,7 +63,7 @@ To create a straight screw dislocation in a single-crystal aluminum sample, the 
    -y      1  1 -2      # lattice orientation in y-direction 
    -z      1  1  1      # lattice orientation in z-direction
    -lat    4.05         # lattice constant 
-   -pbc    1  0  0      # boundary condition flag: '1': pbc, '0': non-pbc
+   -pbc    1  0  0      # boundary condition flag along x/y/z-axis: '1': pbc, '0': non-pbc
 
    #dislocation
    nLoop 1
@@ -72,10 +72,10 @@ To create a straight screw dislocation in a single-crystal aluminum sample, the 
    -bs     1/2          # scaling coefficient of Burgers vector, e.g., 1/2 in [110]/2
    -dnorm  1  1  1      # normal direction of dislocation plane
    -dc     0 -100 0.5   # center of dislocation loop
-   -dr     200          # radius of dislocaiton loopS
+   -dr     200          # radius of dislocaiton loop
    -lx     1 -1  0      # local x axis on dislocation plane 
    -ly     1  1 -2      # local y axis on dislocation plane 
-   -ndisl  4  0.5       # segments of a discretized dislocation loop and a scaling factor
+   -ndisl  4  0.5       # segments/vertices of a discretized dislocation loop and a scaling factor
 
 .. important::
    In this example, the parameter tag '-ndisl' accepts two arguments. When only a single argument is specified, the resulting dislocation loop assumes a square geometry. If a second argument is provided, it serves as a scaling factor for the loop edge oriented along the direction defined by the '-ly' tag, thereby enabling the generation of rectangular loop configuration.

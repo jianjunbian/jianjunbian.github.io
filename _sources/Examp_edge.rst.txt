@@ -55,7 +55,7 @@ To create a straight edge dislocation withing a single-crystal aluminum sampel, 
    -y      1  1 -2      # lattice orientation in y-direction
    -z      1  1  1      # lattice orientation in z-direction
    -lat    4.05         # lattice constant 
-   -pbc    1  1  0      # boundary condition flag: '1': pbc, '0': non-pbc
+   -pbc    1  1  0      # boundary condition flag along x/y/z-axis: '1': pbc, '0': non-pbc
 
    #dislocation
    nLoop 1
@@ -64,10 +64,10 @@ To create a straight edge dislocation withing a single-crystal aluminum sampel, 
    -bs     1/2          # scaling coefficient of Burgers vector, e.g., 1/2 in [110]/2
    -dnorm  1 -1  0      # normal direction of dislocation plane
    -dc     0  0  80     # center of dislocation loop
-   -dr     180          # radius of dislocaiton loopS
+   -dr     180          # radius of dislocaiton loop
    -lx     1  1 -2      # local x axis on dislocation plane 
    -ly     1  1  1      # local y axis on dislocation plane 
-   -ndisl  4  0.5       # segments of a discretized dislocation loop and a scaling factor
+   -ndisl  4  0.5       # segments/vertices of a discretized dislocation loop and a scaling factor
 
 .. important::
    In this example, the parameter tag '-ndisl' accepts two arguments as well, and the second argument is a scaling factor used to scale the edge length of the dislocation loop along the defined direction specified by the '-ly' tag.
