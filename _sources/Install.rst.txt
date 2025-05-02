@@ -1,5 +1,5 @@
-Download and Install
-====================
+Download and Installation
+=========================
 
 Download
 --------
@@ -27,8 +27,8 @@ These are the files and subdirectories in the CryDisGen distribution:
 +---------------+--------------------------------------------------------------+
 
 
-Install
--------
+Installation
+------------
 
 After downloading the binary file and saving it as ``CryDisGen``, open a Terminal window, navigate to the directory where ``CryDisGen`` is saved, and run the following command:
 
