@@ -55,14 +55,14 @@ Parameter tags
 .. code-block:: CryDisGen
    :linenos:
 
-   #those starting with '#' are comment lines
+   #lines starting with '#' are comments 
    #crystal region
    Region 
-   -x     1 -1  0        # lattice orientation in x-direction 
-   -y     1  1 -2        # lattice orientation in y-direction
-   -z     1  1  1        # lattice orientation in z-direction
+   -x     1 -1  0        # lattice orientation along x-axis 
+   -y     1  1 -2        # lattice orientation along y-axis
+   -z     1  1  1        # lattice orientation along z-axis
    -lat   3.615          # lattice constant
-   -pbc   1  1  1        # boundary condition flag along x/y/z-axis: '1': pbc, '0': non-pbc 
+   -pbc   1  1  1        # boundary condition flags along x/y/z-axex: '1' for periodic, '0'for non-periodic
    
 **Loop:**
 
@@ -70,16 +70,16 @@ Parameter tags
    :linenos:
 
    #dislocation loop
-   nLoop   1             # number of dislocation loop
-   Loop                  # label of a loop section
+   nLoop   1             # number of dislocation loops
+   Loop                  # label for dislocation loop section
    -bv     1  1  1       # orientation of Burgers vector
-   -bs     1/3           # scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2<110>
+   -bs     1/3           # scalar coefficient of Burgers vector, e.g., 1/2 in 1/2<110>
    -dnorm  1  1  1       # normal direction of dislocation plane 
    -dc     0.2 0  0      # center of dislocation loop
    -dr     25            # radius of dislocation loop. For square shape, it is half the edge length. 
-   -lx     1 -1  0       # local x axis on dislocation plane 
-   -ly     1  1 -2       # local y axis on dislocation plane 
-   -ndisl  4             # segments/vertices of a discretized dislocation loop
+   -lx     1 -1  0       # local x-axis on dislocation plane 
+   -ly     1  1 -2       # local y-axis on dislocation plane 
+   -ndisl  4             # number of segments/vertices in a discretized dislocation loop
 
 .. important::
    Here, the local coordination system *xoy* on the dislocation plane is set by 
@@ -109,13 +109,13 @@ Parameter tags
    :linenos:
 
    #stacking fault tetrahedrion
-   nTetrahedron 1        # number of stacking fault tetrahedron
-   Tetrahedron           # label of a tetrahedron section
-   -tc      0. 0. 0.     # center of the bottom face of tetrahedron 
-   -tr      40           # radius of the circumscribe circle of the bottom face
-   -tnorm  -1 -1 -1      # outward normal direction at the bottom face of tetrahedron
-   -lxt     1 -1  0      # local x axis at the bottom face
-   -lyt    -1 -1  2      # local y axis at the bottom face
+   nTetrahedron 1        # number of stacking fault tetrahedra
+   Tetrahedron           # label for tetrahedron section
+   -tc      0. 0. 0.     # center of the bottom face of the tetrahedron 
+   -tr      40           # radius of the circumscribed circle of the bottom face
+   -tnorm  -1 -1 -1      # outward normal direction of the tetrahedron's bottom face 
+   -lxt     1 -1  0      # local x-axis at the bottom face
+   -lyt    -1 -1  2      # local y-axis at the bottom face
 
 
 **Helix:**
@@ -124,11 +124,11 @@ Parameter tags
    :linenos:
 
    #dislocation helix
-   nHelix  1             # number of dislocation helix
-   Helix                 # label of a dislocation helix section
-   -bvh    1  1  1       # orientation of the Burgers vector of helix
+   nHelix  1             # number of dislocation helices
+   Helix                 # label for dislocation helix section
+   -bvh    1  1  1       # orientation of the Burgers vector for the helix
    -bsh    1/2           # scalar coefficient of the Burgers vector 
-   -f      mesh0.dat     # mesh of a helical surface
+   -f      mesh0.dat     # mesh file of the helical surface
 
 
 .. tip::

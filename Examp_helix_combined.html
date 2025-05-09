@@ -122,14 +122,14 @@
 <p class="admonition-title">Parameter file</p>
 <p>Content of the <a class="reference internal" href="ParaFile.html"><span class="doc">para_file</span></a>:</p>
 </div>
-<div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">#those starting with &#39;#&#39; are comment lines</span>
-<span class="linenos"> 2</span><span class="c">#crystal region</span>
+<div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">#line starting with &#39;#&#39; are comments</span>
+<span class="linenos"> 2</span><span class="c">#crystal region definition</span>
 <span class="linenos"> 3</span><span class="k">Region</span>
-<span class="linenos"> 4</span><span class="n">-x</span>      1 -1  0      <span class="c"># lattice orientation in x-direction</span>
-<span class="linenos"> 5</span><span class="n">-y</span>      1  1 -2      <span class="c"># lattice orientation in y-direction</span>
-<span class="linenos"> 6</span><span class="n">-z</span>      1  1  1      <span class="c"># lattice orientation in z-direction</span>
+<span class="linenos"> 4</span><span class="n">-x</span>      1 -1  0      <span class="c"># lattice orientation along x-axis</span>
+<span class="linenos"> 5</span><span class="n">-y</span>      1  1 -2      <span class="c"># lattice orientation along y-axis</span>
+<span class="linenos"> 6</span><span class="n">-z</span>      1  1  1      <span class="c"># lattice orientation along z-axis</span>
 <span class="linenos"> 7</span><span class="n">-lat</span>    2.867        <span class="c"># lattice constant of Fe</span>
-<span class="linenos"> 8</span><span class="n">-pbc</span>    1  1  1      <span class="c"># boundary condition flag: &#39;1&#39;: pbc, &#39;0&#39;: non-pbc</span>
+<span class="linenos"> 8</span><span class="n">-pbc</span>    1  1  1      <span class="c"># boundary condition flags along x/y/z-axes: &#39;1&#39; for periodic, &#39;0&#39;for non-periodic</span>
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="k">nHelix</span>  1
 <span class="linenos">11</span><span class="k">Helix</span>
@@ -138,16 +138,16 @@
 <span class="linenos">14</span><span class="n">-f</span>      mesh.dat
 <span class="linenos">15</span>
 <span class="linenos">16</span><span class="c">#dislcoation</span>
-<span class="linenos">17</span><span class="k">nLoop</span>    1           <span class="c"># number of dislocaito loop</span>
-<span class="linenos">18</span>Loopn                <span class="c"># label of a loop section</span>
+<span class="linenos">17</span><span class="k">nLoop</span>    1           <span class="c"># number of dislocaiton loops</span>
+<span class="linenos">18</span>Loopn                <span class="c"># label for dislocation loop section</span>
 <span class="linenos">19</span><span class="n">-bv</span>     1  1  1      <span class="c"># orientation of Burgers vector</span>
-<span class="linenos">20</span><span class="n">-bs</span>    -1/2          <span class="c"># scalar coefficient of Burgers vector, e.g., 1/2 in: 1/2&lt;110&gt;</span>
-<span class="linenos">21</span><span class="n">-dnorm</span>  1 -1  0      <span class="c"># normal direction of the plane with dislocation loop</span>
+<span class="linenos">20</span><span class="n">-bs</span>    -1/2          <span class="c"># scalar coefficient of Burgers vector, e.g., 1/2 in 1/2&lt;110&gt;</span>
+<span class="linenos">21</span><span class="n">-dnorm</span>  1 -1  0      <span class="c"># normal direction of dislocation plane</span>
 <span class="linenos">22</span><span class="n">-dc</span>     0  25 0      <span class="c"># center of dislocation loop</span>
-<span class="linenos">23</span><span class="n">-dr</span>     25           <span class="c"># radius of dislocaiton loop of half of the edge of square loop</span>
-<span class="linenos">24</span><span class="n">-lx</span>     1  1 -2      <span class="c"># local x axis on the dislocation plane</span>
-<span class="linenos">25</span><span class="n">-ly</span>     1  1  1      <span class="c"># local y axis on the dislocation plane</span>
-<span class="linenos">26</span><span class="n">-ndisl</span>  4  2.4       <span class="c"># segments/vertices of a discretized dislocation loop and a scaling factor</span>
+<span class="linenos">23</span><span class="n">-dr</span>     25           <span class="c"># half of the edge length of a square loop</span>
+<span class="linenos">24</span><span class="n">-lx</span>     1  1 -2      <span class="c"># local x-axis on the dislocation plane</span>
+<span class="linenos">25</span><span class="n">-ly</span>     1  1  1      <span class="c"># local y-axis on the dislocation plane</span>
+<span class="linenos">26</span><span class="n">-ndisl</span>  4  2.4       <span class="c"># number of segments/vertices in the square loop and a scaling factor</span>
 </pre></div>
 </div>
 <div class="admonition important">

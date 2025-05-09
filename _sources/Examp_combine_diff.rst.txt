@@ -34,26 +34,26 @@ To create a combination of different types of dislocations in FCC single crystal
 .. code-block:: CryDisGen
    :linenos:
 
-    #those starting with '#' are comment lines
+    #lines starting with '#' are comments 
     #crystal region
     Region
-    -x      1  0  0      # lattice orientation in x-direction
-    -y      0  1  0      # lattice orientation in y-direction
-    -z      0  0  1      # lattice orientation in z-direction
+    -x      1  0  0      # lattice orientation along x-axis
+    -y      0  1  0      # lattice orientation along y-axis
+    -z      0  0  1      # lattice orientation along z-axis
     -lat    3.615        # lattice constant
-    -pbc    1  1  1      # boundary condition flag: '1': pbc, '0': non-pbc 
+    -pbc    1  1  1      # boundary condition flags along x/y/z-axes: '1' for periodic, '0'for non-periodic 
 
     #dislcoation
     nLoop   4            # number of dislocaito loops
-    Loop                 # label of a dislocation section
+    Loop                 # label for dislocation section
     -bv     1  1  1      # orientation of Burger's vector
-    -bs     1/3          # scalar coefficient of Burger's vector, e.g., 1/2 in: 1/2<110>
-    -dnorm  1  1  1      # normal direction of plane with dislocation loop
+    -bs     1/3          # scalar coefficient of Burger's vector, e.g., 1/2 in 1/2<110>
+    -dnorm  1  1  1      # normal direction of dislocation plane
     -dc     0. 0  0      # center of dislocation loop
-    -dr     25           # radius of dislocaiton loopS
-    -lx    -1  1  0      # local x axis on slip plane 
-    -ly    -1 -1  2      # local y axis on slip plane 
-    -ndisl  3            # segments of a discretized dislocation loop
+    -dr     25           # radius of dislocaiton loop
+    -lx    -1  1  0      # local x-axis on slip plane 
+    -ly    -1 -1  2      # local y-axis on slip plane 
+    -ndisl  3            # number of segments in a discretized dislocation loop
 
     Loop
     -bv    -2 -1 -1
@@ -65,13 +65,13 @@ To create a combination of different types of dislocations in FCC single crystal
     -ly     1 -1  2
     -ndisl  3
      
-    nTetrahedron 1       # number of stacking fault tetrahedron
-    Tetrahedron          # label of tetrahedron
-    -tc     20 20 20.5   # center of the bottom face of tetrahedron
-    -tr     25           # radius of the circumscribe circle of the bottom face
-    -tnorm -1 -1 -1      # outward nomral direction bottom face of tetrahedron
-    -lxt    1 -1  0      # local x axis on the bottom face
-    -lyt   -1 -1  2      # local y axis on the bottom face
+    nTetrahedron 1       # number of stacking fault tetrahedra
+    Tetrahedron          # label for tetrahedron section
+    -tc     20 20 20.5   # center of the bottom face of the tetrahedron
+    -tr     25           # radius of the circumscribed circle of the bottom face
+    -tnorm -1 -1 -1      # outward nomral direction at the tetrahedron's bottom face 
+    -lxt    1 -1  0      # local x-axis on the bottom face
+    -lyt   -1 -1  2      # local y-axis on the bottom face
 
     Loop
     -bv    -1 -1  0
