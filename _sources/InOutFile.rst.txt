@@ -1,7 +1,7 @@
 Input and output files
 ======================
 
-In this section, we explain the structure of the crystal file in detail. 
+In this section, we explain the structure of the crystal data file in detail. 
 
 To seamlessly interact with ``LAMMPS``, both the input and output crystal data files of ``CryDisGen`` adopt the same structure as data file recognized by the `read_data <https://docs.lammps.org/read_data.html>`_ command in ``LAMMPS``. Detailed information on the data file format can be found in the official document of `LAMMPS <https://docs.lammps.org/read_data.html>`_
 
