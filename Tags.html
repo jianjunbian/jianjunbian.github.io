@@ -225,55 +225,40 @@ code will exit with an error.</p>
 <td><p>4 (the Miller-Bravais Indexes)</p></td>
 </tr>
 <tr class="row-odd"><td><p>-lat</p></td>
-<td><p>lattice constant</p></td>
+<td><p>lattice constants</p></td>
 <td><p>1 ( <em>a</em> )</p></td>
 <td><p>2 ( <em>a</em> and <em>c</em> )</p></td>
 </tr>
-<tr class="row-even"><td><p>-tnorm</p></td>
-<td><p>outward normal direction of tetrahedron’s bottom face</p></td>
-<td><p>3 (the Miller Indexes)</p></td>
-<td><p>4 (the Miller-Bravais Indexes)</p></td>
-</tr>
-<tr class="row-odd"><td><p>-lxt</p></td>
-<td><p>local x-axis at tetrahedron’s bottom face</p></td>
-<td><p>3 (the Miller Indexes)</p></td>
-<td><p>4 (the Miller-Bravais Indexes)</p></td>
-</tr>
-<tr class="row-even"><td><p>-lyt</p></td>
-<td><p>local y-axis at tetrahedron’s bottom face</p></td>
-<td><p>3 (the Miller Indexes)</p></td>
-<td><p>4 (the Miller-Bravais Indexes)</p></td>
-</tr>
-<tr class="row-odd"><td><p>-bv</p></td>
+<tr class="row-even"><td><p>-bv</p></td>
 <td><p>orientation of dislocation’s Burgers vector</p></td>
 <td><p>3 (the Miller Indexes)</p></td>
 <td><p>4 (the Miller-Bravais Indexes)</p></td>
 </tr>
-<tr class="row-even"><td><p>-dnorm</p></td>
+<tr class="row-odd"><td><p>-dnorm</p></td>
 <td><p>normal direction of dislocation plane</p></td>
 <td><p>3 (the Miller Indexes)</p></td>
 <td><p>4 (the Miller-Bravais Indexes)</p></td>
 </tr>
-<tr class="row-odd"><td><p>-lx</p></td>
-<td><p>local x-axis at tetrahedron’s bottom face</p></td>
+<tr class="row-even"><td><p>-lx</p></td>
+<td><p>local x-axis on dislocation plane</p></td>
 <td><p>3 (the Miller Indexes)</p></td>
 <td><p>4 (the Miller-Bravais Indexes)</p></td>
 </tr>
-<tr class="row-even"><td><p>-ly</p></td>
-<td><p>local y-axis at tetrahedron’s bottom face</p></td>
+<tr class="row-odd"><td><p>-ly</p></td>
+<td><p>local y-axis on dislocation plane</p></td>
 <td><p>3 (the Miller Indexes)</p></td>
 <td><p>4 (the Miller-Bravais Indexes)</p></td>
 </tr>
-<tr class="row-odd"><td><p>-bvh</p></td>
-<td><p>orientation of dislocation helix’s Burgers vector</p></td>
+<tr class="row-even"><td><p>-bvh</p></td>
+<td><p>orientation of the dislocation helix’s Burgers vector</p></td>
 <td><p>3 (the Miller Indexes)</p></td>
 <td><p>4 (the Miller-Bravais Indexes)</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>All the parameter tags listed in the above table within a single parameter file must be set with the arguments corresponding to the same lattice type. Otherwise, the CryDisGen code will exit with errors, such as “Miller index in line 5 is NOT consistent with the paramater list set previously”.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All the parameter tags listed in the above table within a single parameter file must be set with the arguments corresponding to the same lattice type. Otherwise, the CryDisGen code will exit with an error, such as “The Miller index in line 5 is NOT consistent with the parameter list previously set”.</p>
 </div>
 </section>
 </section>

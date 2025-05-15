@@ -140,33 +140,27 @@ Tag argument list
 The CryDisGen code in its current version can handle three lattices as FCC, BCC, and HCP. All the demonstrated parameter files prior to this sections pertain to FCC/BCC structures. To distinguish the lattice types, CryDisGen utilizes the argument lists of **Parameter tags** to do this. For example, the ``-lat`` tag accepts one argument, *a*, for FCC/BCC lattice, but two arguments, *a* and *c*, for HCP lattice. In FCC/BCC lattice, the orientations are represented by **the Miller indexes**, and the related **Parameter tags** such as ``-x, -y, -lx, -bv`` require three integers as arguments. In contrast, for HCP lattices, these orienation tags require four integers in each arguument list, i.e., **the Miller-Bravais indexes**. All the **Parameter tags** with varying argument number for different lattices are listed in the following table:
 
 
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| Paramater Tags   | Description                                                  | Argument number (FCC/BCC) |  Argument number (HCP)         |
-+==================+==============================================================+===========================+================================+
-| -x               | lattice orientation along x-axis                             |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -y               | lattice orientation along y-axis                             |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -z               | lattice orientation along z-axis                             |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -lat             | lattice constant                                             |  1 ( *a* )                | 2 ( *a* and *c* )              |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -tnorm           | outward normal direction of tetrahedron's bottom face        |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -lxt             | local x-axis at tetrahedron's bottom face                    |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -lyt             | local y-axis at tetrahedron's bottom face                    |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -bv              | orientation of dislocation's Burgers vector                  |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -dnorm           | normal direction of dislocation plane                        |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -lx              | local x-axis at tetrahedron's bottom face                    |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -ly              | local y-axis at tetrahedron's bottom face                    |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
-| -bvh             | orientation of dislocation helix's Burgers vector            |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
-+------------------+--------------------------------------------------------------+---------------------------+--------------------------------+
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| Paramater Tags   | Description                                             | Argument number (FCC/BCC) |  Argument number (HCP)         |
++==================+=========================================================+===========================+================================+
+| -x               | lattice orientation along x-axis                        |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -y               | lattice orientation along y-axis                        |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -z               | lattice orientation along z-axis                        |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -lat             | lattice constants                                       |  1 ( *a* )                | 2 ( *a* and *c* )              |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -bv              | orientation of dislocation's Burgers vector             |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -dnorm           | normal direction of dislocation plane                   |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -lx              | local x-axis on dislocation plane                       |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -ly              | local y-axis on dislocation plane                       |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
+| -bvh             | orientation of the dislocation helix's Burgers vector   |  3 (the Miller Indexes)   | 4 (the Miller-Bravais Indexes) |
++------------------+---------------------------------------------------------+---------------------------+--------------------------------+
 
-.. note::
-   All the parameter tags listed in the above table within a single parameter file must be set with the arguments corresponding to the same lattice type. Otherwise, the CryDisGen code will exit with errors, such as "Miller index in line 5 is NOT consistent with the paramater list set previously".
+.. warning::
+   All the parameter tags listed in the above table within a single parameter file must be set with the arguments corresponding to the same lattice type. Otherwise, the CryDisGen code will exit with an error, such as "The Miller index in line 5 is NOT consistent with the parameter list previously set".
