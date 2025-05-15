@@ -1,0 +1,65 @@
+Dislocation in HCP structure
+============================
+
+.. image:: img/hcp_disl.png
+   :width: 90%
+   :align: center 
+
+*( a ) A single crystal HCP sample and the four types of slip planes in the lattice. ( b ~ e ) Demonstrated squre-shaped dislocation loops on the basal, prismatic, the 1st order pyramidal and the 2nd order pyramidal slip planes in HCP atomic structures. In the figures ( b ~ e), atoms in perfect HCP lattice are not shown for clarity, and the remaining atoms compose the dislocation cores.*
+
+--------
+
+To create a dislocation loop withing a single-crystal magnesium (Mg) sampel, the following two steps are employed: 
+
+**Step 1:**
+
+  Use the tool in the subdirectory :doc:`tools/Hcp <Tools>` to creat an HCP single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: ``hcp_reg.lmp``.
+
+.. code-block:: Shell 
+   :linenos:
+
+   Hcp 100 100 100 -x 2 -1 -1 0 -y 0 1 -1 0 -z 0 0 0 1 Mg
+
+**Step 2:**
+
+   Open terminal, run the following command, and one square-shaped dislocation loop will be created on the basal slip plane.
+
+.. code-block:: Shell 
+   :linenos:
+
+   CryDisGen para_file hcp_reg.lmp
+
+--------
+
+.. admonition::  Parameter file 
+
+   Content of the :doc:`para_file <ParaFile>`:
+
+.. code-block:: CryDisGen
+   :linenos:
+
+   #those starting with '#' are comment lines
+   #dislocation loop is on the local xoy coordinate plane
+   #crystal region
+   Region
+   -x      2 -1 -1  0      # lattice orientation in x-direction
+   -y      0  1 -1  0      # lattice orientation in y-direction
+   -z      0  0  0  1      # lattice orientation in z-direction
+   -lat    3.209 5.241     # lattice constant 
+   -pbc    1  1  1         # boundary condition flag along x/y/z-axis: '1' for pbc, '0' for non-pbc
+
+   #dislcoation
+   nLoop 1
+   Loop
+   -bv     1  1 -2  0      # orientation of Burgers vector
+   -bs     1/3             # scaling coefficient of Burgers vector, e.g., 1/2 in [110]/2
+   -dnorm  0  0  0  1      # normal direction of dislocation plane
+   -dc     0  0  0         # center of dislocation loop
+   -dr     30              # radius of dislocaiton loop
+   -lx     null            # local x-axis on dislocation plane, and will be caculated by the code
+   -ly     null            # local y-axis on dislocation plane, and will be caculated by the code
+   -ndisl  4               # segments of a discretized dislocation loop
+
+.. important::
+   In this example, the parameter tags ``-lx,-ly`` accept one argument ``null`` each, which indicates that the local coordinte axes on the dislocation plane will be calculated by the code automatically. 
+

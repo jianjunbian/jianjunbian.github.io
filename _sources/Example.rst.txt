@@ -18,4 +18,5 @@ These pages provides a series of examples of the dislocation structures created 
    Examp_combine_diff
    Examp_screw
    Examp_edge
+   Examp_hcp
 

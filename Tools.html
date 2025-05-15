@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7. Tools &mdash; CryDisGen v1.0 beta documentation</title>
+  <title>7. Tools &mdash; CryDisGen v1.1 beta documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8451b935" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=6ca803a9"></script>
+      <script src="_static/documentation_options.js?v=f3ea9733"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -56,11 +56,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#create-bcc-region">7.1. Create BCC region</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-fcc-region">7.2. Create FCC region</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#helical-surface">7.3. Helical surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#clip-a-crystal-region">7.4. Clip a crystal region</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#parameter-file-for-loop-array">7.5. Parameter file for loop array</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#parameter-file-for-nested-loops">7.6. Parameter file for nested loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#parameter-file-for-tetrahedron-array">7.7. Parameter file for tetrahedron array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-hcp-region">7.3. Create HCP region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#helical-surface">7.4. Helical surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clip-a-crystal-region">7.5. Clip a crystal region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-file-for-loop-array">7.6. Parameter file for loop array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-file-for-nested-loops">7.7. Parameter file for nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parameter-file-for-tetrahedron-array">7.8. Parameter file for tetrahedron array</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Example.html">8. Examples</a></li>
@@ -110,19 +111,22 @@
 <tr class="row-odd"><td><p>Fcc</p></td>
 <td><p>Create single crystal FCC sample as inpu of CryDisGen</p></td>
 </tr>
-<tr class="row-even"><td><p>Helical_surface</p></td>
+<tr class="row-even"><td><p>Hcp</p></td>
+<td><p>Create single crystal HCP sample as inpu of CryDisGen</p></td>
+</tr>
+<tr class="row-odd"><td><p>Helical_surface</p></td>
 <td><p>Generate a mesh of helical surface used for dislocaiton hexlix</p></td>
 </tr>
-<tr class="row-odd"><td><p>ModelClip</p></td>
+<tr class="row-even"><td><p>ModelClip</p></td>
 <td><p>Cut a cylinder out of a crystal block</p></td>
 </tr>
-<tr class="row-even"><td><p>para_file_loop_array</p></td>
+<tr class="row-odd"><td><p>para_file_loop_array</p></td>
 <td><p>Generate parameter file for an array of dislocation loops</p></td>
 </tr>
-<tr class="row-odd"><td><p>para_file_nested_loop</p></td>
+<tr class="row-even"><td><p>para_file_nested_loop</p></td>
 <td><p>Generate parameter file for an array of nested dislocation loops</p></td>
 </tr>
-<tr class="row-even"><td><p>para_file_tetrahedron_array</p></td>
+<tr class="row-odd"><td><p>para_file_tetrahedron_array</p></td>
 <td><p>Generate parameter file for an array of stacking fault tetrahedrons</p></td>
 </tr>
 </tbody>
@@ -143,22 +147,29 @@
 </a>
 </section>
 <hr class="docutils" />
+<section id="create-hcp-region">
+<h2><span class="section-number">7.3. </span>Create HCP region<a class="headerlink" href="#create-hcp-region" title="Link to this heading"></a></h2>
+<p>Similary, the <code class="docutils literal notranslate"><span class="pre">./tools/Hcp</span></code> directory provides a tool for generating hexagonal close-packed (HCP) crystal structures, which can be used as input for CryDisGen or LAMMPS. The HCP structure is defined using the same parameters—simulation region size, lattice orientations, and element type—as demonstrated in the screenshot below. Note that the lattice orientation here is denoted by the Miller-Bravis indexes, i.e., a four-integer vector.</p>
+<a class="reference internal image-reference" href="_images/tool_hcp.png"><img alt="_images/tool_hcp.png" class="align-center" src="_images/tool_hcp.png" style="width: 70%;" />
+</a>
+</section>
+<hr class="docutils" />
 <section id="helical-surface">
-<h2><span class="section-number">7.3. </span>Helical surface<a class="headerlink" href="#helical-surface" title="Link to this heading"></a></h2>
+<h2><span class="section-number">7.4. </span>Helical surface<a class="headerlink" href="#helical-surface" title="Link to this heading"></a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">./tools/Helical_surface</span></code> directory, a tool provided to generate a mesh of a helical surface, whic is necessary for creating a dislocation helix. The command-line input parameters include the global coordinate system of the atomic region, local coordinate system defining the helix’s orientation, as well as the rotation angle, pitch and radius of the helix, as shown in the screenshot below:</p>
 <a class="reference internal image-reference" href="_images/tool3.png"><img alt="_images/tool3.png" class="align-center" src="_images/tool3.png" style="width: 70%;" />
 </a>
 </section>
 <hr class="docutils" />
 <section id="clip-a-crystal-region">
-<h2><span class="section-number">7.4. </span>Clip a crystal region<a class="headerlink" href="#clip-a-crystal-region" title="Link to this heading"></a></h2>
+<h2><span class="section-number">7.5. </span>Clip a crystal region<a class="headerlink" href="#clip-a-crystal-region" title="Link to this heading"></a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">./tools/ModelClip</span></code> directory, a tool provided to carve a cylinder out of a cubic crystal region. The input parameters include the file name of the crystal region, the axis orientation of the cylinder, and the position of cylinder axis in the other two dimensions.</p>
 <a class="reference internal image-reference" href="_images/tool4.png"><img alt="_images/tool4.png" class="align-center" src="_images/tool4.png" style="width: 70%;" />
 </a>
 </section>
 <hr class="docutils" />
 <section id="parameter-file-for-loop-array">
-<h2><span class="section-number">7.5. </span>Parameter file for loop array<a class="headerlink" href="#parameter-file-for-loop-array" title="Link to this heading"></a></h2>
+<h2><span class="section-number">7.6. </span>Parameter file for loop array<a class="headerlink" href="#parameter-file-for-loop-array" title="Link to this heading"></a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">./tools/para_file_loop_array</span></code> diectory, a shell scrip is provided to generate the <code class="docutils literal notranslate"><span class="pre">Parameter</span> <span class="pre">file</span></code> used by <code class="docutils literal notranslate"><span class="pre">CryDisGen</span></code>. This file enables the creating of an array of full dislocation loops in a BCC crysatl region as demonstrated in <cite>examples &lt;Examp_array_loop&gt;</cite>.</p>
 <a class="reference internal image-reference" href="_images/tool5.png"><img alt="_images/tool5.png" class="align-center" src="_images/tool5.png" style="width: 70%;" />
 </a>
@@ -170,7 +181,7 @@
 </section>
 <hr class="docutils" />
 <section id="parameter-file-for-nested-loops">
-<h2><span class="section-number">7.6. </span>Parameter file for nested loops<a class="headerlink" href="#parameter-file-for-nested-loops" title="Link to this heading"></a></h2>
+<h2><span class="section-number">7.7. </span>Parameter file for nested loops<a class="headerlink" href="#parameter-file-for-nested-loops" title="Link to this heading"></a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">./tools/para_file_nested_loop</span></code> diectory, a shell scrip is provided to generate the <code class="docutils literal notranslate"><span class="pre">Parameter</span> <span class="pre">file</span></code> used by <code class="docutils literal notranslate"><span class="pre">CryDisGen</span></code>. This file enables the creating of a group of nested full dislocation loops in a BCC crysatl region as demonstrated in <cite>examples &lt;Examp_loop_nested&gt;</cite>.</p>
 <a class="reference internal image-reference" href="_images/tool6.png"><img alt="_images/tool6.png" class="align-center" src="_images/tool6.png" style="width: 70%;" />
 </a>
@@ -182,7 +193,7 @@
 </section>
 <hr class="docutils" />
 <section id="parameter-file-for-tetrahedron-array">
-<h2><span class="section-number">7.7. </span>Parameter file for tetrahedron array<a class="headerlink" href="#parameter-file-for-tetrahedron-array" title="Link to this heading"></a></h2>
+<h2><span class="section-number">7.8. </span>Parameter file for tetrahedron array<a class="headerlink" href="#parameter-file-for-tetrahedron-array" title="Link to this heading"></a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">./tools/para_file_tetrahedron_array</span></code> diectory, a shell scrip is provided to generate the <code class="docutils literal notranslate"><span class="pre">Parameter</span> <span class="pre">file</span></code> used by <code class="docutils literal notranslate"><span class="pre">CryDisGen</span></code>. This file enables the creating of an array of stacking fault tetrahedrons in a FCC crysatl region, as demonstrated in <cite>examples &lt;Examp_array_sft&gt;</cite>.</p>
 <a class="reference internal image-reference" href="_images/tool7.png"><img alt="_images/tool7.png" class="align-center" src="_images/tool7.png" style="width: 70%;" />
 </a>

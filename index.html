@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CryDisGen Documentation ( version 1.0-Mar 2025 ) &mdash; CryDisGen v1.0 beta documentation</title>
+  <title>CryDisGen Documentation ( version 1.1-May 2025 ) &mdash; CryDisGen v1.1 beta documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8451b935" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=6ca803a9"></script>
+      <script src="_static/documentation_options.js?v=f3ea9733"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -75,7 +75,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">CryDisGen Documentation ( version 1.0-Mar 2025 )</li>
+      <li class="breadcrumb-item active">CryDisGen Documentation ( version 1.1-May 2025 )</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -85,12 +85,12 @@
            <div itemprop="articleBody">
              
   <section id="crydisgen-documentation-version-version">
-<h1>CryDisGen Documentation ( version 1.0-Mar 2025 )<a class="headerlink" href="#crydisgen-documentation-version-version" title="Link to this heading"></a></h1>
+<h1>CryDisGen Documentation ( version 1.1-May 2025 )<a class="headerlink" href="#crydisgen-documentation-version-version" title="Link to this heading"></a></h1>
 <section id="about-crydisgen">
 <h2>About CryDisGen<a class="headerlink" href="#about-crydisgen" title="Link to this heading"></a></h2>
 <p>CryDisGen represents <strong>Cry</strong>stal <strong>Dis</strong>location <strong>Gen</strong>erator.</p>
 <p>CryDisGen is a scientific software tailored for researchers and engineers working with crystal structures. Originally developed by Bian et. al. from <a class="reference external" href="https://www.xauat.edu.cn">Xi’an University of Architecture and Technology</a> and <a class="reference external" href="https://www.xjtu.edu.cn">Xi’an Jiaotong Univeristy</a>, CryDisGen empowers users to create precise atomic models of general dislocation structures in crystals. With its robust modeling capabilities, this free tool supports academic, non-commercial, and commercial applications—making advanced crystallographic research more accessible and efficient.
-Now at version 1.0, CryDisGen is actively maintained with updates from its creators, ensuring reliable performance for its users.</p>
+Now at version 1.1, CryDisGen is actively maintained with updates from its creators, ensuring reliable performance for its users.</p>
 <p><a class="reference internal" href="_images/core_fcc_al_relaxed.png"><img alt="fcc" src="_images/core_fcc_al_relaxed.png" style="width: 48%;" /></a> <a class="reference internal" href="_images/core_bcc_nb_relaxed.png"><img alt="bcc" src="_images/core_bcc_nb_relaxed.png" style="width: 48%;" /></a></p>
 <div style="text-align: center;"><i> Core structures of screw dislocations in single crystal FCC aluminum (left) and BCC niobium (right).</i></div><hr class="docutils" />
 <p>Once you’re familiar with CryDisGen, we recommend bookmarking the page <a class="reference internal" href="Tags.html"><span class="doc">Tags in Parameter file</span></a>, which provides quick access to all tags with clear explanations that the CryDisGen code uses in the Parameter file.</p>
@@ -120,16 +120,18 @@ Now at version 1.0, CryDisGen is actively maintained with updates from its creat
 <li class="toctree-l2"><a class="reference internal" href="Tags.html#indication-tags">6.1. Indication tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tags.html#counter-tags">6.2. Counter tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tags.html#parameter-tags">6.3. Parameter tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tags.html#tag-argument-list">6.4. Tag argument list</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tools.html">7. Tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Tools.html#create-bcc-region">7.1. Create BCC region</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tools.html#create-fcc-region">7.2. Create FCC region</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tools.html#helical-surface">7.3. Helical surface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tools.html#clip-a-crystal-region">7.4. Clip a crystal region</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tools.html#parameter-file-for-loop-array">7.5. Parameter file for loop array</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tools.html#parameter-file-for-nested-loops">7.6. Parameter file for nested loops</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Tools.html#parameter-file-for-tetrahedron-array">7.7. Parameter file for tetrahedron array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#create-hcp-region">7.3. Create HCP region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#helical-surface">7.4. Helical surface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#clip-a-crystal-region">7.5. Clip a crystal region</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#parameter-file-for-loop-array">7.6. Parameter file for loop array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#parameter-file-for-nested-loops">7.7. Parameter file for nested loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tools.html#parameter-file-for-tetrahedron-array">7.8. Parameter file for tetrahedron array</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Example.html">8. Examples</a><ul>
@@ -145,6 +147,7 @@ Now at version 1.0, CryDisGen is actively maintained with updates from its creat
 <li class="toctree-l2"><a class="reference internal" href="Examp_combine_diff.html">8.10. Combination of dislocations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Examp_screw.html">8.11. Straight screw dislocation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Examp_edge.html">8.12. Straight edge dislocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Examp_hcp.html">8.13. Dislocation in HCP structure</a></li>
 </ul>
 </li>
 </ul>
@@ -153,7 +156,10 @@ Now at version 1.0, CryDisGen is actively maintained with updates from its creat
 <p class="caption" role="heading"><span class="caption-text">Appendix:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Contact.html">1. Contact</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reference.html">2. Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reference.html">2. Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Reference.html#author-list">2.1. Author list</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="note admonition" id="webbrowser">

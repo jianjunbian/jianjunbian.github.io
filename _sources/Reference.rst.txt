@@ -7,3 +7,83 @@ if you pubish results obtained with CryDisGen, please cite the software in your 
 
    J. Bian, W. Yuan, Y. Ding, Z. Shao, and G. Wang. **Cry**\ stal **Dis**\ locaiotn **Gen**\ erator (CryDisGen): A versatile toolkit to create general dislocation structures in crystals. (To be published)
 
+Author list
+-----------
+
+
+.. image:: img/author_bian.png
+   :width: 20%
+   :align: left 
+
+**Jianjun Bian**
+
+-Bachelor: Xi'an Jiaotong University
+
+-Ph.D: Xi'an Jiaotong University
+
+-Current position:  Associate professor in the School of Science at `Xi'an Universiyt of Architecture of Technology <https://www.xauat.edu.cn>`_.
+
+-Websites: `Bian's Google Scholar <https://scholar.google.com/citations?user=GRWWS4QAAAAJ&hl=en>`_ and `Bian's Research Gate <https://www.researchgate.net/profile/Bian-Jianjun>`_
+
+\-
+
+\-
+
+------------------------
+
+.. image:: img/author_yuan.png
+	 :width: 20%
+	 :align: left 
+
+**Weike Yuan**
+
+-Bachelor: Xi'an Jiaotong University
+
+-Ph.D: Xi'an Jiaotong University
+
+-Current position: Assistant professor in the Department of Engineering Mechanics at `Xi'an Jiaotong University <https://www.xjtu.edu.cn>`_.
+
+-Websites: `Yuan's Google Scholar <https://scholar.google.com/citations?user=GWHL3EcAAAAJ&hl=en>`_, and `Yuan's Research Gate <https://www.researchgate.net/profile/Yuan-Weike>`_
+
+\-
+
+\-
+
+------------------------
+
+.. image:: img/author_ding.png
+   :width: 20%
+   :align: left 
+
+**Yue Ding**
+
+-Bachelor: Xi'an Jiaotong University
+
+-Ph.D: Xi'an Jiaotong University
+
+-Current position: Associate professor in the Department of Engineering Mechanics at `Xi'an Jiaotong University <https://www.xjtu.edu.cn>`_.
+
+-Websites: `Ding's Research Gate <https://www.researchgate.net/profile/Yue-Ding-13>`_
+
+\-
+
+\-
+
+------------------------
+
+
+**Zhushan Shao**
+
+-Current position: Dean and full professor of the School of Science at `Xi'an Universiyt of Architecture of Technology <https://www.xauat.edu.cn>`_.
+
+\-
+
+------------------------
+
+**Gangfeng Wang**
+
+-Current position: Full professor in the Department of Engineering Mechanics at `Xi'an Jiaotong University <https://www.xjtu.edu.cn>`_.
+
+-Websites: `Wang's Google Scholar <https://scholar.google.com/citations?user=MB5AuWAAAAAJ&hl=en>`_, and `Wang's Research Gate <https://www.researchgate.net/profile/Gangfeng-Wang>`_.
+
+\-

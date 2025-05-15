@@ -10,6 +10,8 @@ These are the subdirectories in ``./tools``, where several useful tools are rele
 +-----------------------------+----------------------------------------------------------------------+
 | Fcc                         | Create single crystal FCC sample as inpu of CryDisGen                |
 +-----------------------------+----------------------------------------------------------------------+
+| Hcp                         | Create single crystal HCP sample as inpu of CryDisGen                |
++-----------------------------+----------------------------------------------------------------------+
 | Helical_surface             | Generate a mesh of helical surface used for dislocaiton hexlix       |
 +-----------------------------+----------------------------------------------------------------------+
 | ModelClip                   | Cut a cylinder out of a crystal block                                |
@@ -43,6 +45,17 @@ Create FCC region
 Similary, the ``./tools/Fcc`` directory provides a tool for generating face-centered cubic (FCC) crystal structures, which can be used as input for CryDisGen or LAMMPS. The FCC structure is defined using the same parameters—simulation region size, lattice orientations, and element type—as demonstrated in the screenshot below:
 
 .. image:: img/tool2.png
+   :width: 70%
+   :align: center
+
+--------------
+
+Create HCP region
+-----------------
+
+Similary, the ``./tools/Hcp`` directory provides a tool for generating hexagonal close-packed (HCP) crystal structures, which can be used as input for CryDisGen or LAMMPS. The HCP structure is defined using the same parameters—simulation region size, lattice orientations, and element type—as demonstrated in the screenshot below. Note that the lattice orientation here is denoted by the Miller-Bravis indexes, i.e., a four-integer vector. 
+
+.. image:: img/tool_hcp.png
    :width: 70%
    :align: center
 
