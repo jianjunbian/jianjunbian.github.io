@@ -127,15 +127,15 @@
 <p class="admonition-title">Parameter file</p>
 <p>Content of the <a class="reference internal" href="ParaFile.html"><span class="doc">para_file</span></a>:</p>
 </div>
-<div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">#those starting with &#39;#&#39; are comment lines</span>
+<div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">#lines starting with &#39;#&#39; are comments</span>
 <span class="linenos"> 2</span><span class="c">#dislocation loop is on the local xoy coordinate plane</span>
 <span class="linenos"> 3</span><span class="c">#crystal region</span>
 <span class="linenos"> 4</span><span class="k">Region</span>
-<span class="linenos"> 5</span><span class="n">-x</span>      2 -1 -1  0      <span class="c"># lattice orientation in x-direction</span>
-<span class="linenos"> 6</span><span class="n">-y</span>      0  1 -1  0      <span class="c"># lattice orientation in y-direction</span>
-<span class="linenos"> 7</span><span class="n">-z</span>      0  0  0  1      <span class="c"># lattice orientation in z-direction</span>
+<span class="linenos"> 5</span><span class="n">-x</span>      2 -1 -1  0      <span class="c"># lattice orientation along x-axis</span>
+<span class="linenos"> 6</span><span class="n">-y</span>      0  1 -1  0      <span class="c"># lattice orientation along y-axis</span>
+<span class="linenos"> 7</span><span class="n">-z</span>      0  0  0  1      <span class="c"># lattice orientation along z-axis</span>
 <span class="linenos"> 8</span><span class="n">-lat</span>    3.209 5.241     <span class="c"># lattice constant</span>
-<span class="linenos"> 9</span><span class="n">-pbc</span>    1  1  1         <span class="c"># boundary condition flag along x/y/z-axis: &#39;1&#39; for pbc, &#39;0&#39; for non-pbc</span>
+<span class="linenos"> 9</span><span class="n">-pbc</span>    1  1  1         <span class="c"># boundary condition flags along x/y/z-axex: &#39;1&#39; for pbc, &#39;0&#39; for non-pbc</span>
 <span class="linenos">10</span>
 <span class="linenos">11</span><span class="c">#dislcoation</span>
 <span class="linenos">12</span><span class="k">nLoop</span> 1
@@ -147,12 +147,12 @@
 <span class="linenos">18</span><span class="n">-dr</span>     30              <span class="c"># radius of dislocaiton loop</span>
 <span class="linenos">19</span><span class="n">-lx</span>     null            <span class="c"># local x-axis on dislocation plane, and will be caculated by the code</span>
 <span class="linenos">20</span><span class="n">-ly</span>     null            <span class="c"># local y-axis on dislocation plane, and will be caculated by the code</span>
-<span class="linenos">21</span><span class="n">-ndisl</span>  4               <span class="c"># segments of a discretized dislocation loop</span>
+<span class="linenos">21</span><span class="n">-ndisl</span>  4               <span class="c"># segments/vertices in a discretized dislocation loop</span>
 </pre></div>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>In this example, the parameter tags <code class="docutils literal notranslate"><span class="pre">-lx,-ly</span></code> accept one argument <code class="docutils literal notranslate"><span class="pre">null</span></code> each, which indicates that the local coordinte axes on the dislocation plane will be calculated by the code automatically.</p>
+<p>In the above example, the parameter tags, <code class="docutils literal notranslate"><span class="pre">-lx,-ly</span></code>, both accept one argument <code class="docutils literal notranslate"><span class="pre">null</span></code>, which indicates that the local coordinte axes on the dislocation plane will be automatically calculated by the code.</p>
 </div>
 </section>
 
