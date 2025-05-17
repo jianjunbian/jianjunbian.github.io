@@ -61,5 +61,5 @@ To create a dislocation loop withing a single-crystal magnesium (Mg) sampel, the
    -ndisl  4               # segments/vertices in a discretized dislocation loop
 
 .. important::
-   In the above example, the parameter tags, ``-lx,-ly``, both accept one argument ``null``, which indicates that the local coordinate axes on the dislocation plane will be automatically calculated by the code. 
+   In the above example, the parameter tags, ``-lx,-ly``, both accept one argument ``null``, which indicates that the local coordinate axes on the dislocation plane will be automatically set by the code. 
 

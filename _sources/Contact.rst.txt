@@ -1,7 +1,11 @@
 Contact
 =======
 
-If you have any questions on the usage of the software, please contact the authors by: 
+If you have any questions abount using the software or encounter a bug while running the code, please contact the authors at: 
 
 * CryDisGen@gmail.com 
+
+When reporting a bug, please include the parameter file for your model and the details of the error message in the email.
+
+
 
