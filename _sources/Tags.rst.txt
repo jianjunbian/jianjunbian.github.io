@@ -163,4 +163,4 @@ The CryDisGen code in its current version can handle three types of lattices suc
 +------------------+---------------------------------------------------------+---------------------------+--------------------------------+
 
 .. warning::
-   All the parameter tags listed in the above table within a single parameter file must be set with the arguments corresponding to the same lattice type. Otherwise, the CryDisGen code will exit with an error, such as "The Miller index in line 5 is NOT consistent with the parameter list previously set".
+   All the parameter tags listed in the above table within a single parameter file must be set with the arguments corresponding to the same lattice type. Otherwise, the CryDisGen code cannot properly detect the crystal structure, and will exit with an error, such as "The Miller index in line 5 is NOT consistent with the parameter list previously set".
