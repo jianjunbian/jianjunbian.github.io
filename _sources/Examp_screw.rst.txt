@@ -9,7 +9,7 @@ Straight screw dislocation
 
 |screw0| |screw1|
 
-*A straight screw dislocation is created in a single-crystal aluminum sample: the unrelaxed configuration ( left ) and the relaxed configuration ( right ). In the figures, atoms in perfect FCC lattice are not shown for clarity. White atoms are those at free surface, and red atoms are those in HCP lattice.*
+*A straight screw dislocation is created in a single-crystal aluminum sample: the unrelaxed configuration ( left ) and the relaxed configuration ( right ). In the figures, atoms in perfect FCC lattice are not shown for clarity. White atoms are those at free surface and dislocation core, and red atoms are those in HCP lattice.*
 
 .. |core0| image:: img/core_fcc_al_unrelaxed.png
    :width: 48%
