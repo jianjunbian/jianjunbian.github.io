@@ -34,11 +34,11 @@ Since ``CryDisGen`` is designed to work with crystal structures, only the data f
 The data files contains a header section and a body section. Typically, the first line is a comment that provides some explainations of the file. The header section specifies the overall informaiton of the crystal structure, such as the number of atoms (line 3), the number of atom types (line 4), and the extent of the atomic region (line 6 ~ 8). The body section begins with keywords like ``Masses`` (line 10), ``Atoms`` (line 14). The ``Masses`` subsection defines the atomic weight of each atom type (line 12), the ``Atoms`` subsection consists of lines detailing individual atom information (line 16 ~ end of file). For a data file of the ``atomic`` type, the per-atom values have the meanings and units as follows:
 
 
-+-----------------------------+-------------------------------------+
-| *Type of the crystal file*: | *Atomic items per-line*:            |
-+-----------------------------+-------------------------------------+
-| atomic                      | atom-ID atom-type x y z             |
-+-----------------------------+-------------------------------------+
++-----------------------------------+-------------------------------------+
+| Type of crystal data file         | Atomic items per-line               |
++===================================+=====================================+
+| atomic                            | atom-ID atom-type x y z             |
++-----------------------------------+-------------------------------------+
 
 *Description*:
 

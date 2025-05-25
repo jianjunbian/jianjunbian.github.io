@@ -63,7 +63,7 @@ To create a straight screw dislocation in a single-crystal aluminum sample, the 
    -y      1  1 -2      # lattice orientation along y-axis 
    -z      1  1  1      # lattice orientation along z-axis
    -lat    4.05         # lattice constant 
-   -pbc    1  0  0      # boundary condition flags along x/y/z-axes: '1' for periodic, '0'for non-periodic 
+   -pbc    1  0  0      # boundary condition flags along x/y/z-axes: '1' for periodic, '0' for non-periodic 
 
    #dislocation
    nLoop 1

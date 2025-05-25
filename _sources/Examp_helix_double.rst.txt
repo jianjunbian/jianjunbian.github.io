@@ -41,7 +41,7 @@ To create double dislocation helices,
    -y     1  1 -2         # lattice orientation along y-axis
    -z     1  1  1         # lattice orientation along z-axis
    -lat   2.867           # lattice constant of Fe
-   -pbc   1  1  1         # boundary condition flags along x/y/z-axes: '1' for periodic, '0'for non-periodic 
+   -pbc   1  1  1         # boundary condition flags along x/y/z-axes: '1' for periodic, '0' for non-periodic 
 
    nHelix 2               # total number of helices
    Helix                  # lable for dislocation helix section
