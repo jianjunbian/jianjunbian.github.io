@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5. Parameter file &mdash; CryDisGen v1.1 beta documentation</title>
+  <title>5. Parameter file &mdash; CryDisGen v2.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8451b935" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=f3ea9733"></script>
+      <script src="_static/documentation_options.js?v=e09f69a6"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -103,34 +103,38 @@
 <span class="linenos"> 6</span><span class="n">-z</span>      0  0  1      <span class="c"># lattice orientation along z-axis</span>
 <span class="linenos"> 7</span><span class="n">-lat</span>    3.615        <span class="c"># lattice constant</span>
 <span class="linenos"> 8</span><span class="n">-pbc</span>    1  1  1      <span class="c"># boundary condition flags along x/y/z-axes: &#39;1&#39; for periodic, &#39;0&#39;for non-periodic</span>
-<span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="c">#stacking fault tetrahedron</span>
-<span class="linenos">11</span><span class="k">nTetrahedron</span>  1      <span class="c"># number of stacking fault tetrahedra</span>
-<span class="linenos">12</span><span class="k">Tetrahedron</span>          <span class="c"># label for tetrahedron section</span>
-<span class="linenos">13</span><span class="n">-tc</span>     0. 0. 0.     <span class="c"># center of the bottom face of the tetrahedron</span>
-<span class="linenos">14</span><span class="n">-tr</span>     40           <span class="c"># radius of the circumscribed circle of the bottom face</span>
-<span class="linenos">15</span><span class="n">-tnorm</span> -1 -1 -1      <span class="c"># outward normal direction at the tetrahedron&#39;s bottom face</span>
-<span class="linenos">16</span><span class="n">-lxt</span>    1 -1  0      <span class="c"># local x-axis at the bottom face</span>
-<span class="linenos">17</span><span class="n">-lyt</span>   -1 -1  2      <span class="c"># local y-axis at the bottom face</span>
-<span class="linenos">18</span>
-<span class="linenos">19</span><span class="c">#dislocation loop</span>
-<span class="linenos">20</span><span class="k">nLoop</span>   1            <span class="c"># number of dislocation loops</span>
-<span class="linenos">21</span><span class="k">Loop</span>                 <span class="c"># label for dislocaiton loop section</span>
-<span class="linenos">22</span><span class="n">-bv</span>     1  1  1      <span class="c"># orientation of Burgers vector</span>
-<span class="linenos">23</span><span class="n">-bs</span>     1/3          <span class="c"># scalar coefficient of Burgers vector, e.g., 1/2 in 1/2&lt;110&gt;</span>
-<span class="linenos">24</span><span class="n">-dnorm</span>  1  1  1      <span class="c"># normal direction of dislocation plane</span>
-<span class="linenos">25</span><span class="n">-dc</span>     0. 0  0      <span class="c"># center of dislocation loop</span>
-<span class="linenos">26</span><span class="n">-dr</span>     25           <span class="c"># radius of dislocaiton loop</span>
-<span class="linenos">27</span><span class="n">-lx</span>     1 -1  0      <span class="c"># local x-axis on dislocation plane</span>
-<span class="linenos">28</span><span class="n">-ly</span>     1  1 -2      <span class="c"># local y-axis on dislocation plane</span>
-<span class="linenos">29</span><span class="n">-ndisl</span>  4            <span class="c"># number of segments/vertices in a discretized dislocation loop</span>
-<span class="linenos">30</span>
-<span class="linenos">31</span><span class="c">#dislocation helix</span>
-<span class="linenos">32</span><span class="k">nHelix</span>  1            <span class="c"># number of dislocation helices</span>
-<span class="linenos">33</span><span class="k">Helix</span>                <span class="c"># label for dislocation helix section</span>
-<span class="linenos">34</span><span class="n">-bvh</span>    1  1  1      <span class="c"># orientation of the Burgers vector for the helix</span>
-<span class="linenos">35</span><span class="n">-bsh</span>    1/2          <span class="c"># scalar coefficient of Burgers vector, e.g., 1/2 in 1/2&lt;110&gt;</span>
-<span class="linenos">36</span><span class="n">-f</span>      mesh.dat     <span class="c"># mesh data file of the helical surface</span>
+<span class="hll"><span class="linenos"> 9</span>-nu     0.33         <span class="c"># Poinsson&#39;s of copper. **This option is supported only in Version 2.0 and later.**</span>
+</span><span class="linenos">10</span>                     <span class="c"># When this tag is specified, the displacement field used to construct dislocation</span>
+<span class="linenos">11</span>                     <span class="c"># includes both plastic and elastic contributions. When omitted, only the plastic</span>
+<span class="linenos">12</span>                     <span class="c"># contribution is applied.</span>
+<span class="linenos">13</span>
+<span class="linenos">14</span><span class="c">#stacking fault tetrahedron</span>
+<span class="linenos">15</span><span class="k">nTetrahedron</span>  1      <span class="c"># number of stacking fault tetrahedra</span>
+<span class="linenos">16</span><span class="k">Tetrahedron</span>          <span class="c"># label for tetrahedron section</span>
+<span class="linenos">17</span><span class="n">-tc</span>     0. 0. 0.     <span class="c"># center of the bottom face of the tetrahedron</span>
+<span class="linenos">18</span><span class="n">-tr</span>     40           <span class="c"># radius of the circumscribed circle of the bottom face</span>
+<span class="linenos">19</span><span class="n">-tnorm</span> -1 -1 -1      <span class="c"># outward normal direction at the tetrahedron&#39;s bottom face</span>
+<span class="linenos">20</span><span class="n">-lxt</span>    1 -1  0      <span class="c"># local x-axis at the bottom face</span>
+<span class="linenos">21</span><span class="n">-lyt</span>   -1 -1  2      <span class="c"># local y-axis at the bottom face</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c">#dislocation loop</span>
+<span class="linenos">24</span><span class="k">nLoop</span>   1            <span class="c"># number of dislocation loops</span>
+<span class="linenos">25</span><span class="k">Loop</span>                 <span class="c"># label for dislocaiton loop section</span>
+<span class="linenos">26</span><span class="n">-bv</span>     1  1  1      <span class="c"># orientation of Burgers vector</span>
+<span class="linenos">27</span><span class="n">-bs</span>     1/3          <span class="c"># scalar coefficient of Burgers vector, e.g., 1/2 in 1/2&lt;110&gt;</span>
+<span class="linenos">28</span><span class="n">-dnorm</span>  1  1  1      <span class="c"># normal direction of dislocation plane</span>
+<span class="linenos">29</span><span class="n">-dc</span>     0. 0  0      <span class="c"># center of dislocation loop</span>
+<span class="linenos">30</span><span class="n">-dr</span>     25           <span class="c"># radius of dislocaiton loop</span>
+<span class="linenos">31</span><span class="n">-lx</span>     1 -1  0      <span class="c"># local x-axis on dislocation plane</span>
+<span class="linenos">32</span><span class="n">-ly</span>     1  1 -2      <span class="c"># local y-axis on dislocation plane</span>
+<span class="linenos">33</span><span class="n">-ndisl</span>  4            <span class="c"># number of segments/vertices in a discretized dislocation loop</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="c">#dislocation helix</span>
+<span class="linenos">36</span><span class="k">nHelix</span>  1            <span class="c"># number of dislocation helices</span>
+<span class="linenos">37</span><span class="k">Helix</span>                <span class="c"># label for dislocation helix section</span>
+<span class="linenos">38</span><span class="n">-bvh</span>    1  1  1      <span class="c"># orientation of the Burgers vector for the helix</span>
+<span class="linenos">39</span><span class="n">-bsh</span>    1/2          <span class="c"># scalar coefficient of Burgers vector, e.g., 1/2 in 1/2&lt;110&gt;</span>
+<span class="linenos">40</span><span class="n">-f</span>      mesh.dat     <span class="c"># mesh data file of the helical surface</span>
 </pre></div>
 </div>
 <section id="general-format">
