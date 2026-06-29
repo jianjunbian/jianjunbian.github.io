@@ -5,7 +5,7 @@ if you pubish results obtained with CryDisGen, please cite the software in your 
 
 .. hint::
 
-   J. Bian, W. Yuan, Y. Ding, Z. Shao, and G. Wang. **Cry**\ stal **Dis**\ locaiotn **Gen**\ erator (CryDisGen): A versatile toolkit to create general dislocation structures in crystals. Computer Physics Communications, 2026, 110287. In Press. https://doi.org/10.1016/j.cpc.2026.110287 
+   J. Bian, W. Yuan, Y. Ding, Z. Shao, and G. Wang. **Cry**\ stal **Dis**\ locaiotn **Gen**\ erator (CryDisGen): A versatile toolkit to create general dislocation structures in crystals. Computer Physics Communications, 2026, 327, 110287. https://doi.org/10.1016/j.cpc.2026.110287 
 
 Author list
 -----------
