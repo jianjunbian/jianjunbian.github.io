@@ -108,8 +108,11 @@
 <p>To create a stacking fault tetrahedron,</p>
 <p><strong>Step 1:</strong></p>
 <blockquote>
-<div><p>Use the tool in subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Fcc</span></a> to creat an FCC single crystal sample: <code class="docutils literal notranslate"><span class="pre">fcc_reg.lmp</span></code>;</p>
+<div><p>Use the tool in the subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Fcc</span></a> to creat an FCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: <code class="docutils literal notranslate"><span class="pre">fcc_reg.lmp</span></code>.</p>
 </div></blockquote>
+<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>Fcc<span class="w"> </span><span class="m">120</span><span class="w"> </span><span class="m">120</span><span class="w"> </span><span class="m">120</span><span class="w"> </span>-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>-z<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>Cu
+</pre></div>
+</div>
 <p><strong>Step 2:</strong></p>
 <blockquote>
 <div><p>Open terminal, run the following command:</p>
@@ -134,7 +137,7 @@
 <span class="linenos">10</span><span class="k">nTetrahedron</span>  1       <span class="c"># number of stacking fault tetrahedra</span>
 <span class="linenos">11</span><span class="k">Tetrahedron</span>           <span class="c"># label for tetrahedron section</span>
 <span class="linenos">12</span><span class="n">-tc</span>     -0. 0. 0.     <span class="c"># center of the bottom face of the tetrahedron</span>
-<span class="linenos">13</span><span class="n">-tr</span>      40           <span class="c"># radius of the circumscribed circle of the bottom face</span>
+<span class="linenos">13</span><span class="n">-tr</span>      42           <span class="c"># radius of the circumscribed circle of the bottom face</span>
 <span class="linenos">14</span><span class="n">-tnorm</span>  -1 -1 -1      <span class="c"># outward normal direction of the tetrahedron&#39;s bottom face</span>
 <span class="linenos">15</span><span class="n">-lxt</span>     1 -1  0      <span class="c"># local x-axis on the bottom face</span>
 <span class="linenos">16</span><span class="n">-lyt</span>    -1 -1  2      <span class="c"># local y-axis on the bottom face</span>

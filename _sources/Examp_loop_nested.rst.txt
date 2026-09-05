@@ -16,6 +16,15 @@ To create an array of nested full dislocation loops in a BCC single crystal samp
 
   Use the tool in subdirectory :doc:`tools/Bcc <Tools>` to creat a BCC single crystal sample: ``bcc_reg.lmp``, use the shell script in subdirectory :doc:`tools/para_file_nested_loop <Tools>` to create the parameter file: ``para_file``;
 
+.. code-block:: Shell 
+   :linenos:
+
+   #to create bcc_reg.lmp
+   Bcc 200 200 200 -x 1 0 0 -y 0 1 0 -z 0 0 1 Nb
+
+   #to generate para_file
+   gen_para_file.sh 
+
 **Step 2:**
 
   Open terminal, run the following command:

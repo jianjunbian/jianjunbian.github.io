@@ -13,7 +13,12 @@ To create a stacking fault tetrahedron,
 
 **Step 1:**
 
-  Use the tool in subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample: ``fcc_reg.lmp``;
+  Use the tool in the subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: ``fcc_reg.lmp``.
+
+.. code-block:: Shell 
+   :linenos:
+
+   Fcc 120 120 120 -x 1 -1 0 -y 1 1 0 -z 0 0 1 Cu
 
 **Step 2:**
 
@@ -45,7 +50,7 @@ To create a stacking fault tetrahedron,
    nTetrahedron  1       # number of stacking fault tetrahedra
    Tetrahedron           # label for tetrahedron section
    -tc     -0. 0. 0.     # center of the bottom face of the tetrahedron
-   -tr      40           # radius of the circumscribed circle of the bottom face
+   -tr      42           # radius of the circumscribed circle of the bottom face
    -tnorm  -1 -1 -1      # outward normal direction of the tetrahedron's bottom face 
    -lxt     1 -1  0      # local x-axis on the bottom face
    -lyt    -1 -1  2      # local y-axis on the bottom face

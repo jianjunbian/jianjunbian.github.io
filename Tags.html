@@ -157,8 +157,12 @@
 <p class="admonition-title">Important</p>
 <p>Here, the local coordination system <em>xoy</em> on the dislocation plane is set by
 the parameter tags ‘-lx, -ly’, and is used to change the in-plane orientation of
-dislocation.
-A dislocation loop is approximated by an <em>N</em>-vertex equilateral polygon in geometry,
+dislocation. Note that the normal directoin set by ‘-dnorm’ also serves as the local z-axis.
+These three directions together define a right-handed Cartesian coordinate system.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>A dislocation loop is approximated by an <em>N</em>-vertex equilateral polygon in geometry,
 where <em>N</em> is set by ‘-ndisl’.
 The position vector of the <em>i</em>-th vertex, where <em>i</em> = 1, 2, …, <em>N</em>, can be found by rotating
 the vector (1, 0) counterclockwise by an angle of (<em>i</em>-1)*2π/<em>N</em> in the <em>xoy</em> plane. For square-shape

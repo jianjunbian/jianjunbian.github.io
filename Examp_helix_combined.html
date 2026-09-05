@@ -111,6 +111,13 @@
 <blockquote>
 <div><p>Use the tool in subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Bcc</span></a> to creat a BCC crystal sample: <code class="docutils literal notranslate"><span class="pre">bcc_reg.lmp</span></code>, use the shell script in subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tool/Helical_surface</span></a> to create the mesh of a helical surface: <code class="docutils literal notranslate"><span class="pre">mesh.dat</span></code>;</p>
 </div></blockquote>
+<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">#to create bcc_reg.lmp</span>
+<span class="linenos">2</span>Bcc<span class="w"> </span><span class="m">200</span><span class="w"> </span><span class="m">200</span><span class="w"> </span><span class="m">200</span><span class="w"> </span>-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-2<span class="w"> </span>-z<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>Fe
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1">#to generate helical surface mesh</span>
+<span class="linenos">5</span>Helical_surface<span class="w"> </span>-xg<span class="w"> </span><span class="m">1</span><span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-yg<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-2<span class="w"> </span>-zg<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-xl<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-2<span class="w"> </span>-yl<span class="w"> </span>-1<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">0</span><span class="w"> </span>-zl<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">1440</span><span class="w"> </span><span class="m">30</span>
+</pre></div>
+</div>
 <p><strong>Step 2:</strong></p>
 <blockquote>
 <div><p>Open terminal, run the following command:</p>

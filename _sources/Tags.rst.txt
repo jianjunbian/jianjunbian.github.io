@@ -84,7 +84,10 @@ Parameter tags
 .. important::
    Here, the local coordination system *xoy* on the dislocation plane is set by 
    the parameter tags '-lx, -ly', and is used to change the in-plane orientation of 
-   dislocation. 
+   dislocation. Note that the normal directoin set by '-dnorm' also serves as the local z-axis. 
+   These three directions together define a right-handed Cartesian coordinate system. 
+
+.. important::
    A dislocation loop is approximated by an *N*-vertex equilateral polygon in geometry, 
    where *N* is set by '-ndisl'. 
    The position vector of the *i*-th vertex, where *i* = 1, 2, ..., *N*, can be found by rotating 

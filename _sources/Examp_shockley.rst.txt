@@ -13,7 +13,12 @@ To create a Shockley partial dislocation loop,
 
 **Step 1:**
 
-  Use the tool in subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample: ``fcc_reg.lmp``;
+  Use the tool in the subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: ``fcc_reg.lmp``.
+
+.. code-block:: Shell 
+   :linenos:
+
+   Fcc 100 100 100 -x 1 0 0 -y 0 1 0 -z 0 0 1 Cu
 
 **Step 2:**
 

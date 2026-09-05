@@ -16,6 +16,12 @@ To create a combination of different types of dislocations in FCC single crystal
 
   Use the tool in subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample: ``fcc_reg.lmp``;
 
+.. code-block:: Shell 
+   :linenos:
+   
+   #to create fcc_reg.lmp
+   Fcc 100 100 100 -l 1 0 0 -m 0 1 0 -n 0 0 1
+
 **Step 2:**
 
   Open terminal, run the following command:

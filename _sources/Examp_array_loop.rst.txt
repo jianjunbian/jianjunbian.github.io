@@ -15,6 +15,15 @@ To create an array of full dislocation loops in a BCC single crystal sample,
 
   Use the tool in subdirectory :doc:`tools/Bcc <Tools>` to creat a BCC single crystal sample: ``bcc_reg.lmp``, use the shell script in subdirectory :doc:`tools/para_file_loop_array <Tools>` to create the parameter file: ``para_file``;
 
+.. code-block:: Shell 
+   :linenos:
+
+   #to create bcc_reg.lmp
+   Bcc-reg 200 200 200 -l 1 0 0 -m 0 1 0 -n 0 0 1 Ta
+
+   #to generate para_file
+   gen_para_file.sh
+
 **Step 2:**
 
   Open terminal, run the following command:

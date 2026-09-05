@@ -108,8 +108,11 @@
 <p>To create a Frank partial dislocation loop,</p>
 <p><strong>Step 1:</strong></p>
 <blockquote>
-<div><p>Use the tool in subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Fcc</span></a> to creat an FCC single crystal sample: <code class="docutils literal notranslate"><span class="pre">fcc_reg.lmp</span></code>;</p>
+<div><p>Use the tool in the subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Fcc</span></a> to creat an FCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: <code class="docutils literal notranslate"><span class="pre">fcc_reg.lmp</span></code>.</p>
 </div></blockquote>
+<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>Fcc<span class="w"> </span><span class="m">150</span><span class="w"> </span><span class="m">150</span><span class="w"> </span><span class="m">150</span><span class="w"> </span>-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-2<span class="w"> </span>-z<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>Cu
+</pre></div>
+</div>
 <p><strong>Step 2:</strong></p>
 <blockquote>
 <div><p>Open terminal, run the following command:</p>
@@ -126,8 +129,8 @@
 <span class="linenos"> 2</span><span class="c">#crystal region definition</span>
 <span class="linenos"> 3</span><span class="k">Region</span>
 <span class="linenos"> 4</span><span class="n">-x</span>      1 -1  0      <span class="c"># lattice orientation along x-axis</span>
-<span class="linenos"> 5</span><span class="n">-y</span>      1  1  0      <span class="c"># lattice orientation along y-axis</span>
-<span class="linenos"> 6</span><span class="n">-z</span>      0  0  1      <span class="c"># lattice orientation along z-axis</span>
+<span class="linenos"> 5</span><span class="n">-y</span>      1  1 -2      <span class="c"># lattice orientation along y-axis</span>
+<span class="linenos"> 6</span><span class="n">-z</span>      1  1  1      <span class="c"># lattice orientation along z-axis</span>
 <span class="linenos"> 7</span><span class="n">-lat</span>    3.615        <span class="c"># lattice constant</span>
 <span class="linenos"> 8</span><span class="n">-pbc</span>    1  1  1      <span class="c"># boundary condition flags along x/y/z-axes: &#39;1&#39; for periodic, &#39;0&#39; for non-periodic</span>
 <span class="linenos"> 9</span>

@@ -15,6 +15,16 @@ To create an array of stacking fault tetrahedrons in an FCC single crystal sampl
 
   Use the tool in subdirectory :doc:`tools/Fcc <Tools>` to creat an FCC single crystal sample: ``fcc_reg.lmp``, use the shell script in subdirectory :doc:`tools/para_file_tetrahedron_array <Tools>` to create the parameter file: ``para_file``;
 
+.. code-block:: Shell 
+   :linenos:
+
+   #to create fcc_reg.lmp
+   Fcc 150 150 150 -x 1 0 0 -y 0 1 0 -z 0 0 1 Cu
+
+   #to generate para_file
+   gen_para_file.sh
+
+
 **Step 2:**
 
   Open terminal, run the following command:

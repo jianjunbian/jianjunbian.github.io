@@ -17,6 +17,16 @@ To create a dislocation helix,
 
   Use the tool in subdirectory :doc:`tools/Bcc <Tools>` to creat a BCC single crystal sample: ``bcc_reg.lmp``, use the tool in subdirectory :doc:`Tool/Helical_surface <Tools>` to create the mesh of a helical surface: ``mesh.dat``;
 
+.. code-block:: Shell 
+   :linenos:
+
+   #to create bcc_reg.lmp
+   Bcc 200 200 200 -x 1 -1 0 -y 1 1 -2 -z 1 1 1 Fe
+
+   #to generate data file of a hellcal surface mesh
+   Helical_surface -xg 1 -1 0 -yg 1 1 -2 -zg 1 1 1 -xl 1 1 -2 -yl -1 1 0 -zl 1 1 1 25 1440 30
+
+
 **Step 2:**
 
   Open terminal, run the following command:
