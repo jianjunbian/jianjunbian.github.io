@@ -20,7 +20,7 @@ To create a combination of different types of dislocations in FCC single crystal
    :linenos:
    
    #to create fcc_reg.lmp
-   Fcc 100 100 100 -l 1 0 0 -m 0 1 0 -n 0 0 1
+   Fcc 100 100 100 -x 1 0 0 -y 0 1 0 -z 0 0 1 Cu
 
 **Step 2:**
 
