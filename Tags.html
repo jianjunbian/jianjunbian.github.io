@@ -129,15 +129,21 @@
 <p>Parameter tags in CryDisGen’s parameter file define the detailed configuration settings for the crystal region or dislocation objects specified by indication tags (<em>Region, Loop, Tetrahedron, Helix</em>). Prefixed with a hyphen (e.g., -x, -bv, -tc), these tags follow their associated indication tag and provide specific values—such as coordinates, vectors, or scalars—that CryDisGen uses to construct the atomic-scale structure. Each parameter tag is tailored to its section’s context, ensuring precise customization of the simulation model.</p>
 </div>
 <p><strong>Region:</strong></p>
-<div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c">#lines starting with &#39;#&#39; are comments</span>
-<span class="linenos">2</span><span class="c">#crystal region</span>
-<span class="linenos">3</span><span class="k">Region</span>
-<span class="linenos">4</span><span class="n">-x</span>     1 -1  0        <span class="c"># lattice orientation along x-axis</span>
-<span class="linenos">5</span><span class="n">-y</span>     1  1 -2        <span class="c"># lattice orientation along y-axis</span>
-<span class="linenos">6</span><span class="n">-z</span>     1  1  1        <span class="c"># lattice orientation along z-axis</span>
-<span class="linenos">7</span><span class="n">-lat</span>   3.615          <span class="c"># lattice constant</span>
-<span class="linenos">8</span><span class="n">-pbc</span>   1  1  1        <span class="c"># boundary condition flags along x/y/z-axex: &#39;1&#39; for periodic, &#39;0&#39;for non-periodic</span>
+<div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">#lines starting with &#39;#&#39; are comments</span>
+<span class="linenos"> 2</span><span class="c">#crystal region</span>
+<span class="linenos"> 3</span><span class="k">Region</span>
+<span class="linenos"> 4</span><span class="n">-x</span>     1 -1  0        <span class="c"># lattice orientation along x-axis</span>
+<span class="linenos"> 5</span><span class="n">-y</span>     1  1 -2        <span class="c"># lattice orientation along y-axis</span>
+<span class="linenos"> 6</span><span class="n">-z</span>     1  1  1        <span class="c"># lattice orientation along z-axis</span>
+<span class="linenos"> 7</span><span class="n">-lat</span>   3.615          <span class="c"># lattice constant</span>
+<span class="linenos"> 8</span><span class="n">-pbc</span>   1  1  1        <span class="c"># boundary condition flags along x/y/z-axex: &#39;1&#39; for periodic, &#39;0&#39;for non-periodic</span>
+<span class="hll"><span class="linenos"> 9</span><span class="n">-nu</span>    0.33           <span class="c"># Poisson&#39;s ratio. When it is skipped, only the plastic contribution is applied,</span>
+</span><span class="linenos">10</span>                      <span class="c"># and the elatic contribution is ignored.</span>
 </pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Tag ‘-nu’ is only supported in <strong>Version 2.0 and later</strong>. Unlike other tags, this tag can be included or skipped in the parameter file, corresponding to different setups.</p>
 </div>
 <p><strong>Loop:</strong></p>
 <div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">#dislocation loop</span>
@@ -159,9 +165,6 @@
 the parameter tags ‘-lx, -ly’, and is used to change the in-plane orientation of
 dislocation. Note that the normal directoin set by ‘-dnorm’ also serves as the local z-axis.
 These three directions together define a right-handed Cartesian coordinate system.</p>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
 <p>A dislocation loop is approximated by an <em>N</em>-vertex equilateral polygon in geometry,
 where <em>N</em> is set by ‘-ndisl’.
 The position vector of the <em>i</em>-th vertex, where <em>i</em> = 1, 2, …, <em>N</em>, can be found by rotating
@@ -171,6 +174,9 @@ If this is unnecessary in your case, the vectors
 following the tages ‘-lx, -ly’ can be simply set to ‘Null/null’ as what follows. Note that
 the ‘Null/null’ value should be used at the same time for tags ‘-lx, -ly’. Otherwise,
 code will exit with an error.</p>
+<p>Tag ‘-ndisl’ accepts two arguments. When only a single argument is specified, the resulting dislocation loop assumes a square geometry.
+If a second argument is provided, it serves as a scaling factor for the loop edge oriented along the direction defined by the ‘-ly’ tag,
+thereby enabling the generation of rectangular loop configuration. See <a class="reference internal" href="Examp_helix_combined.html"><span class="doc">Example</span></a> page</p>
 </div>
 <div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">-lx</span>      Null
 <span class="linenos">2</span><span class="n">-ly</span>      Null
@@ -183,9 +189,13 @@ code will exit with an error.</p>
 <span class="linenos">4</span><span class="n">-tc</span>      0. 0. 0.     <span class="c"># center of the bottom face of the tetrahedron</span>
 <span class="linenos">5</span><span class="n">-tr</span>      40           <span class="c"># radius of the circumscribed circle of the bottom face</span>
 <span class="linenos">6</span><span class="n">-tnorm</span>  -1 -1 -1      <span class="c"># outward normal direction of the tetrahedron&#39;s bottom face</span>
-<span class="linenos">7</span><span class="n">-lxt</span>     1 -1  0      <span class="c"># local x-axis at the bottom face</span>
+<span class="linenos">7</span><span class="n">-lxt</span>     1 -1  0      <span class="c"># local x-axis at the bottom face, parallel to one of the face edges</span>
 <span class="linenos">8</span><span class="n">-lyt</span>    -1 -1  2      <span class="c"># local y-axis at the bottom face</span>
 </pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Similar to the above ‘Loop’ section, the local coordinate system <em>xoy</em> is set by the parameter tags ‘-lx, -ly’. The normal directoin set by ‘-tnorm’ also serves as the local z-axis. These three directions together define a right-handed Cartesian coordinate system. When the parameters specified by tags ‘-lxt, -lyt’ are change, the in-plane orientation of the bottome face changes also.</p>
 </div>
 <p><strong>Helix:</strong></p>
 <div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c">#dislocation helix</span>

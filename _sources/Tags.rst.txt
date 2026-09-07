@@ -54,6 +54,7 @@ Parameter tags
 
 .. code-block:: CryDisGen
    :linenos:
+   :emphasize-lines: 9
 
    #lines starting with '#' are comments 
    #crystal region
@@ -63,6 +64,11 @@ Parameter tags
    -z     1  1  1        # lattice orientation along z-axis
    -lat   3.615          # lattice constant
    -pbc   1  1  1        # boundary condition flags along x/y/z-axex: '1' for periodic, '0'for non-periodic
+   -nu    0.33           # Poisson's ratio. When it is skipped, only the plastic contribution is applied, 
+                         # and the elatic contribution is ignored.
+.. important::
+   Tag '-nu' is only supported in **Version 2.0 and later**. Unlike other tags, this tag can be included or skipped in the parameter file, corresponding to different setups. 
+
    
 **Loop:**
 
@@ -87,7 +93,6 @@ Parameter tags
    dislocation. Note that the normal directoin set by '-dnorm' also serves as the local z-axis. 
    These three directions together define a right-handed Cartesian coordinate system. 
 
-.. important::
    A dislocation loop is approximated by an *N*-vertex equilateral polygon in geometry, 
    where *N* is set by '-ndisl'. 
    The position vector of the *i*-th vertex, where *i* = 1, 2, ..., *N*, can be found by rotating 
@@ -97,6 +102,11 @@ Parameter tags
    following the tages '-lx, -ly' can be simply set to 'Null/null' as what follows. Note that
    the 'Null/null' value should be used at the same time for tags '-lx, -ly'. Otherwise,
    code will exit with an error.
+
+   Tag ‘-ndisl’ accepts two arguments. When only a single argument is specified, the resulting dislocation loop assumes a square geometry. 
+   If a second argument is provided, it serves as a scaling factor for the loop edge oriented along the direction defined by the ‘-ly’ tag, 
+   thereby enabling the generation of rectangular loop configuration. See :doc:`Example <Examp_helix_combined>` page
+
       
 
 .. code-block:: CryDisGen
@@ -117,8 +127,11 @@ Parameter tags
    -tc      0. 0. 0.     # center of the bottom face of the tetrahedron 
    -tr      40           # radius of the circumscribed circle of the bottom face
    -tnorm  -1 -1 -1      # outward normal direction of the tetrahedron's bottom face 
-   -lxt     1 -1  0      # local x-axis at the bottom face
+   -lxt     1 -1  0      # local x-axis at the bottom face, parallel to one of the face edges
    -lyt    -1 -1  2      # local y-axis at the bottom face
+
+.. important::
+   Similar to the above 'Loop' section, the local coordinate system *xoy* is set by the parameter tags ‘-lx, -ly’. The normal directoin set by '-tnorm' also serves as the local z-axis. These three directions together define a right-handed Cartesian coordinate system. When the parameters specified by tags '-lxt, -lyt' are change, the in-plane orientation of the bottome face changes also.  
 
 
 **Helix:**
