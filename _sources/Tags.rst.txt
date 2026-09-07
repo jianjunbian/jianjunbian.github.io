@@ -35,7 +35,7 @@ Counter tags
 
 The counter tag **nLoop** specifies the number **N** of dislocation loop sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) indicating how many **Loop** sections follow in the file.
 
-**nTetrhedron N:**
+**nTetrahedron N:**
 
 The counter tag **nTetrahedron** specifies the number **N** of stacking fault tetrahedron sections to be defined in CryDisGen’s parameter file. The value **N** is a positive integer (e.g., 1, 2, etc.) that indicates how many **Tetrahedron** sections follow in the file. It can be abbreviated as **nTetra N**. 
 
@@ -82,7 +82,7 @@ Parameter tags
    -ndisl  4             # number of segments/vertices in a discretized dislocation loop
 
 .. important::
-   Here, the local coordination system *xoy* on the dislocation plane is set by 
+   Here, the local coordinate system *xoy* on the dislocation plane is set by 
    the parameter tags '-lx, -ly', and is used to change the in-plane orientation of 
    dislocation. Note that the normal directoin set by '-dnorm' also serves as the local z-axis. 
    These three directions together define a right-handed Cartesian coordinate system. 
