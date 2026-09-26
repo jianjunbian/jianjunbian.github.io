@@ -86,6 +86,7 @@ Parameter tags
    -lx     1 -1  0       # local x-axis on dislocation plane 
    -ly     1  1 -2       # local y-axis on dislocation plane 
    -ndisl  4             # number of segments/vertices in a discretized dislocation loop
+                         # If supplied, a second argement will serves as a scaling factor. Please see the explanation below.
 
 .. important::
    Here, the local coordinate system *xoy* on the dislocation plane is set by 

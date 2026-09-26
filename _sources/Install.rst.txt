@@ -56,7 +56,7 @@ Compilation
 
 The executable can be directly compiled from the source code as well. Before compiling, make sure that **GNU Make** and a compatible **C++ compiler** are installed and properly configured on the system. The compilation process does not require any additional configuration under the default settings. 
 
-To compile the source files, navigate to the ``./src`` directory in the terminal and run GNU Make by typing: 
+To compile the source files, navigate to the ``./src`` directory in the terminal and run **GNU Make** by typing: 
 
 .. code-block:: bash
 
