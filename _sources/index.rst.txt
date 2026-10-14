@@ -22,8 +22,6 @@ CryDisGen is a scientific software tailored for researchers and engineers workin
 
 |fcc| |bcc|
 
-..  *Core structure of a screw dislocation in single crystal FCC aluminum*.
-
 .. raw:: html
 
    <div style="text-align: center;"><i> Core structures of screw dislocations in single crystal FCC aluminum (left) and BCC niobium (right).</i></div>

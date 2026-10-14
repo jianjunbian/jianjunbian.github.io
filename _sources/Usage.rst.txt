@@ -1,10 +1,14 @@
 Usage
 =====
 
+How to run the program
+----------------------
+
 CryDisGen can be run in Terminal by entering the following command:
 
 .. code-block:: bash
 
+   # bash
    CryDisGen parameter_file crystal_file
 
 .. image:: img/usage.png
@@ -13,9 +17,12 @@ CryDisGen can be run in Terminal by entering the following command:
 
 ------
 
+How to prepare the input files
+------------------------------
+
 Note that the first input paramater, ``parameter_file``, refers to the name of an ACSII text file containing the tags that specify the informaiton of the dislocations. The second paramater, ``crystal_file``, is the name of an ASCII text file providing the structural region where the dislocation will be inserted. Both files must be prepared by the user in advance. 
 
-To write a ``parameter_file``, please refer to the :doc:`Parameter file <ParaFile>` page for a detailed description of the available parameters and their usage. Alternatively, the easiest way to create a ``parameter_file`` is to start from one of the the parameter files provided in the examples on the :doc:`Example <Example>` page. Copy a parameter file of an example that is similar to your intended model, and then modify the relevant parameters according to your requirements.
+To write a ``parameter_file``, please refer to the :doc:`Parameter file <ParaFile>` page for a detailed description of the available parameters and their usage. Alternatively, the easiest way to create a ``parameter_file`` is to start from one of the the parameter files provided in the examples on the :doc:`Example <Example>` page. Copy a parameter file of an example that is similar to your intended model, and then modify the relevant parameters according to your requirements. 
 
 To prepare a ``crystal_file``, you could either use the :doc:`tools <Tools>` provided with ``CryDisGen``, or use any other software that can create an atomic model with its format compatible with the `read_data <https://docs.lammps.org/read_data.html>`_ command of `LAMMPS <https://www.lammps.org>`_.
 

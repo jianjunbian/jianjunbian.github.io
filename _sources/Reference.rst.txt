@@ -7,6 +7,12 @@ if you pubish results obtained with CryDisGen, please cite the software in your 
 
    J. Bian, W. Yuan, Y. Ding, Z. Shao, and G. Wang. **Cry**\ stal **Dis**\ locaiotn **Gen**\ erator (CryDisGen): A versatile toolkit to create general dislocation structures in crystals. Computer Physics Communications, 2026, 327, 110287. https://doi.org/10.1016/j.cpc.2026.110287 
 
+Abstract
+-----------
+The construction of atomic model featuring realistic initial dislocation structures poses a critical challenge for molecular dynamics (MD) simulations. Most existing methods are limited to generating dislocation with simple geometrical morphologies, restricting the generalization of atomic simulations. In this study, we present a scientific software CryDisGen, a versatile and robust toolkit designed to create atomic models with arbitrary dislocation configurations. Based on the displacement field of dislocation derived from the classical Burgers model, CryDisGen can effectively handle dislocations of complex morphologies. The versatility and effectiveness of CryDisGen have been demonstrated through the successful construction of a variety of representative dislocation structures in face-centered cubic (FCC) and body-centered cubic (BCC) crystals. CryDisGen provides a powerful and flexible framework for generating dislocations in crystalline materials, facilitating the atomic modelling with realistic dislocation structures in MD simulations.
+
+------------------------
+
 Author list
 -----------
 

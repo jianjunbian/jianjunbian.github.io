@@ -7,7 +7,7 @@ It is a structured ASCII text file designed to supply configuration details for 
 
 .. code-block:: CryDisGen
    :linenos:
-   :emphasize-lines: 9
+   :emphasize-lines: 9, 13
 
    #lines starting with '#' are comments 
    #crystal region definition
@@ -21,6 +21,9 @@ It is a structured ASCII text file designed to supply configuration details for 
                         # When this tag is specified, the displacement field used to construct dislocation 
                         # includes both plastic and elastic contributions. When omitted, only the plastic 
                         # contribution is applied.
+   -rcut   1.0          # Cutoff radius. **This option is supported only in Version 2.2.2 and later.** 
+                        # used to set the cutoff radius for deleting overlapped atoms (units: A)
+                        # If it is skipped, the defautl value is 2.0 set by the code
 
    #stacking fault tetrahedron
    nTetrahedron  1      # number of stacking fault tetrahedra

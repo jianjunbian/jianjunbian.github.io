@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3. Usage &mdash; CryDisGen v2.2 documentation</title>
+  <title>3. Usage &mdash; CryDisGen v2.2.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8451b935" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=e09f69a6"></script>
+      <script src="_static/documentation_options.js?v=7e518144"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -49,7 +49,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install.html">2. Download and Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-run-the-program">3.1. How to run the program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-prepare-the-input-files">3.2. How to prepare the input files</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="InOutFile.html">4. Input and output files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ParaFile.html">5. Parameter file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tags.html">6. Tags in Parameter file</a></li>
@@ -87,18 +91,25 @@
              
   <section id="usage">
 <h1><span class="section-number">3. </span>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h1>
+<section id="how-to-run-the-program">
+<h2><span class="section-number">3.1. </span>How to run the program<a class="headerlink" href="#how-to-run-the-program" title="Link to this heading"></a></h2>
 <p>CryDisGen can be run in Terminal by entering the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CryDisGen<span class="w"> </span>parameter_file<span class="w"> </span>crystal_file
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># bash</span>
+CryDisGen<span class="w"> </span>parameter_file<span class="w"> </span>crystal_file
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="_images/usage.png"><img alt="_images/usage.png" class="align-center" src="_images/usage.png" style="width: 80%;" />
 </a>
+</section>
 <hr class="docutils" />
+<section id="how-to-prepare-the-input-files">
+<h2><span class="section-number">3.2. </span>How to prepare the input files<a class="headerlink" href="#how-to-prepare-the-input-files" title="Link to this heading"></a></h2>
 <p>Note that the first input paramater, <code class="docutils literal notranslate"><span class="pre">parameter_file</span></code>, refers to the name of an ACSII text file containing the tags that specify the informaiton of the dislocations. The second paramater, <code class="docutils literal notranslate"><span class="pre">crystal_file</span></code>, is the name of an ASCII text file providing the structural region where the dislocation will be inserted. Both files must be prepared by the user in advance.</p>
 <p>To write a <code class="docutils literal notranslate"><span class="pre">parameter_file</span></code>, please refer to the <a class="reference internal" href="ParaFile.html"><span class="doc">Parameter file</span></a> page for a detailed description of the available parameters and their usage. Alternatively, the easiest way to create a <code class="docutils literal notranslate"><span class="pre">parameter_file</span></code> is to start from one of the the parameter files provided in the examples on the <a class="reference internal" href="Example.html"><span class="doc">Example</span></a> page. Copy a parameter file of an example that is similar to your intended model, and then modify the relevant parameters according to your requirements.</p>
 <p>To prepare a <code class="docutils literal notranslate"><span class="pre">crystal_file</span></code>, you could either use the <a class="reference internal" href="Tools.html"><span class="doc">tools</span></a> provided with <code class="docutils literal notranslate"><span class="pre">CryDisGen</span></code>, or use any other software that can create an atomic model with its format compatible with the <a class="reference external" href="https://docs.lammps.org/read_data.html">read_data</a> command of <a class="reference external" href="https://www.lammps.org">LAMMPS</a>.</p>
 <p>After entering the above command in Terminal and pressing the Enter key, if no error occurs, an output file named <code class="docutils literal notranslate"><span class="pre">outfile.lmp</span></code> will be generated in the same directory where the command is executed.</p>
 <p>Both the input and output files of crystal structure can be directly read by the <a class="reference external" href="https://docs.lammps.org/read_data.html">read_data</a> command of <a class="reference external" href="https://www.lammps.org">LAMMPS</a> or visualzied by <a class="reference external" href="http://www.ovito.org">OVITO</a></p>
+</section>
 </section>
 
 
@@ -112,7 +123,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Jianjun Bian et al.</p>
+    <p>&#169; Copyright 2025 - 2026, Jianjun Bian et al.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -54,7 +54,7 @@ Parameter tags
 
 .. code-block:: CryDisGen
    :linenos:
-   :emphasize-lines: 9
+   :emphasize-lines: 9, 11
 
    #lines starting with '#' are comments 
    #crystal region
@@ -65,10 +65,12 @@ Parameter tags
    -lat   3.615          # lattice constant
    -pbc   1  1  1        # boundary condition flags along x/y/z-axex: '1' for periodic, '0'for non-periodic
    -nu    0.33           # Poisson's ratio. When it is skipped, only the plastic contribution is applied, 
-                         # and the elatic contribution is ignored.
-.. important::
-   Tag '-nu' is only supported in **Version 2.0 and later**. Unlike other tags, this tag can be included or skipped in the parameter file, corresponding to different setups. 
+                         # and the elatic contribution is ignored. 
+   -rcut  1.0            # cutoff radius for deleting overlapped atoms after applying displacement field. 
+                         # When it is skipped, a default value, 2.0 A, is used.
 
+.. important::
+   Tag '-nu' is supported in **Version 2.0 and later**, and tag '-rcut' is supported in **Version 2.2.2 and later**. Unlike other tags, these two tags can be included or skipped in the parameter file, corresponding to different setups. 
    
 **Loop:**
 
@@ -86,7 +88,7 @@ Parameter tags
    -lx     1 -1  0       # local x-axis on dislocation plane 
    -ly     1  1 -2       # local y-axis on dislocation plane 
    -ndisl  4             # number of segments/vertices in a discretized dislocation loop
-                         # If supplied, a second argement will serves as a scaling factor. Please see the explanation below.
+                         # When supplied, a second argument will serve as a scaling factor. Please see the explanation below
 
 .. important::
    Here, the local coordinate system *xoy* on the dislocation plane is set by 
@@ -107,7 +109,6 @@ Parameter tags
    Tag ‘-ndisl’ accepts two arguments. When only a single argument is specified, the resulting dislocation loop assumes a square geometry. 
    If a second argument is provided, it serves as a scaling factor for the loop edge oriented along the direction defined by the ‘-ly’ tag, 
    thereby enabling the generation of rectangular loop configuration. See :doc:`Example <Examp_helix_combined>` page
-
       
 
 .. code-block:: CryDisGen
@@ -132,7 +133,7 @@ Parameter tags
    -lyt    -1 -1  2      # local y-axis at the bottom face
 
 .. important::
-   Similar to the above 'Loop' section, the local coordinate system *xoy* is set by the parameter tags ‘-lx, -ly’. The normal directoin set by '-tnorm' also serves as the local z-axis. These three directions together define a right-handed Cartesian coordinate system. When the parameters specified by tags '-lxt, -lyt' are change, the in-plane orientation of the bottome face changes also.  
+   Similar to the above 'Loop' section, the local coordinate system *xoy* is set by the parameter tags ‘-lx, -ly’. The normal directoin set by '-tnorm' also serves as the local z-axis. These three directions together define a right-handed Cartesian coordinate system. When the parameters specified by tags '-lxt, -lyt' are change, the in-plane orientation of the bottome face changes also. 
 
 
 **Helix:**

@@ -1,11 +1,27 @@
-Contact
-=======
+Contact and Support
+===================
 
-If you have any questions abount using the software or encounter a bug while running the code, please contact the authors at: 
+If you have any questions about using the software, encounter problems while running the software, or have suggestions for improving its functionality, please feel free to contact the authors at: 
 
-* CryDisGen@gmail.com 
+Email: CryDisGen@gmail.com 
 
 When reporting a bug, please include the parameter file for your model and the details of the error message in the email.
 
+Reporting Bugs
+--------------
 
+If you encounter a bug or unexpected behavior while using CryDisGen, please report it by email. To help us identify and resolve the problem efficiently, please provide the following information whenever possible:
+
+**Problem description**: A brief explanation of the issue and the circumstances under which it occurs.
+
+**Input files**:         The parameter file used to generate the model and the input crystal structure. If the size of the crystal structure file is too larger, please just send some descriptions of it instead.
+
+**Error messages**:      The complete error messages or relevant output produced by the software.
+
+If possible, please also attach screenshots or visualization results illustrating the issue.
+
+Technical Support
+-------------------------------
+
+If you need assistance with model construction, parameter settings, boundary conditions, or other aspects of CryDisGen, please contact us by email. When requesting technical support, we recommend including a description of the model you intend to construct, the parameters you have used, and the specific difficulties you have encountered.
 

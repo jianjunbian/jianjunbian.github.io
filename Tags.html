@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6. Tags in Parameter file &mdash; CryDisGen v2.2 documentation</title>
+  <title>6. Tags in Parameter file &mdash; CryDisGen v2.2.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=8451b935" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=e09f69a6"></script>
+      <script src="_static/documentation_options.js?v=7e518144"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -64,7 +64,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Appendix:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Contact.html">1. Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Contact.html">1. Contact and Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reference.html">2. Reference</a></li>
 </ul>
 
@@ -139,11 +139,13 @@
 <span class="linenos"> 8</span><span class="n">-pbc</span>   1  1  1        <span class="c"># boundary condition flags along x/y/z-axex: &#39;1&#39; for periodic, &#39;0&#39;for non-periodic</span>
 <span class="hll"><span class="linenos"> 9</span><span class="n">-nu</span>    0.33           <span class="c"># Poisson&#39;s ratio. When it is skipped, only the plastic contribution is applied,</span>
 </span><span class="linenos">10</span>                      <span class="c"># and the elatic contribution is ignored.</span>
+<span class="hll"><span class="linenos">11</span><span class="n">-rcut</span>  1.0            <span class="c"># cutoff radius for deleting overlapped atoms after applying displacement field.</span>
+</span><span class="linenos">12</span>                      <span class="c"># When it is skipped, a default value, 2.0 A, is used.</span>
 </pre></div>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Tag ‘-nu’ is only supported in <strong>Version 2.0 and later</strong>. Unlike other tags, this tag can be included or skipped in the parameter file, corresponding to different setups.</p>
+<p>Tag ‘-nu’ is supported in <strong>Version 2.0 and later</strong>, and tag ‘-rcut’ is supported in <strong>Version 2.2.2 and later</strong>. Unlike other tags, these two tags can be included or skipped in the parameter file, corresponding to different setups.</p>
 </div>
 <p><strong>Loop:</strong></p>
 <div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c">#dislocation loop</span>
@@ -157,7 +159,7 @@
 <span class="linenos"> 9</span><span class="n">-lx</span>     1 -1  0       <span class="c"># local x-axis on dislocation plane</span>
 <span class="linenos">10</span><span class="n">-ly</span>     1  1 -2       <span class="c"># local y-axis on dislocation plane</span>
 <span class="linenos">11</span><span class="n">-ndisl</span>  4             <span class="c"># number of segments/vertices in a discretized dislocation loop</span>
-<span class="linenos">12</span>                      <span class="c"># If supplied, a second argement will serves as a scaling factor. Please see the explanation below.</span>
+<span class="linenos">12</span>                      <span class="c"># When supplied, a second argument will serve as a scaling factor. Please see the explanation below</span>
 </pre></div>
 </div>
 <div class="admonition important">
@@ -289,7 +291,7 @@ thereby enabling the generation of rectangular loop configuration. See <a class=
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Jianjun Bian et al.</p>
+    <p>&#169; Copyright 2025 - 2026, Jianjun Bian et al.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
