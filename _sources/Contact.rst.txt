@@ -7,7 +7,7 @@ Email: CryDisGen@gmail.com
 
 When reporting a bug, please include the parameter file for your model and the details of the error message in the email.
 
-Reporting Bugs
+Reporting bugs
 --------------
 
 If you encounter a bug or unexpected behavior while using CryDisGen, please report it by email. To help us identify and resolve the problem efficiently, please provide the following information whenever possible:
@@ -20,7 +20,7 @@ If you encounter a bug or unexpected behavior while using CryDisGen, please repo
 
 If possible, please also attach screenshots or visualization results illustrating the issue.
 
-Technical Support
+Technical support
 -------------------------------
 
 If you need assistance with model construction, parameter settings, boundary conditions, or other aspects of CryDisGen, please contact us by email. When requesting technical support, we recommend including a description of the model you intend to construct, the parameters you have used, and the specific difficulties you have encountered.
