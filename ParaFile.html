@@ -52,10 +52,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Usage.html">3. Usage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="InOutFile.html">4. Input and output files</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. Parameter file</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general-format">5.1. General Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-format">5.1. General format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sections">5.2. Sections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#key-characteristics">5.3. Key Characteristics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#purpose-and-usage">5.4. Purpose and Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-characteristics">5.3. Key characteristics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#purpose-and-usage">5.4. Purpose and usage</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tags.html">6. Tags in Parameter file</a></li>
@@ -64,7 +64,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Appendix:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Contact.html">1. Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Contact.html">1. Contact and Support</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Reference.html">2. Reference</a></li>
 </ul>
 
@@ -108,8 +108,8 @@
 <span class="linenos">11</span>                     <span class="c"># includes both plastic and elastic contributions. When omitted, only the plastic</span>
 <span class="linenos">12</span>                     <span class="c"># contribution is applied.</span>
 <span class="hll"><span class="linenos">13</span><span class="n">-rcut</span>   1.0          <span class="c"># Cutoff radius. **This option is supported only in Version 2.2.2 and later.**</span>
-</span><span class="linenos">14</span>                     <span class="c"># used to set the cutoff radius for deleting overlapped atoms (units: A)</span>
-<span class="linenos">15</span>                     <span class="c"># If it is skipped, the defautl value is 2.0 set by the code</span>
+</span><span class="linenos">14</span>                     <span class="c"># used to set the cutoff radius for deleting overlapped atoms at dislocation cores (units: A)</span>
+<span class="linenos">15</span>                     <span class="c"># If it is skipped, the default value is 2.0 set by the code</span>
 <span class="linenos">16</span>
 <span class="linenos">17</span><span class="c">#stacking fault tetrahedron</span>
 <span class="linenos">18</span><span class="k">nTetrahedron</span>  1      <span class="c"># number of stacking fault tetrahedra</span>
@@ -141,7 +141,7 @@
 </pre></div>
 </div>
 <section id="general-format">
-<h2><span class="section-number">5.1. </span>General Format<a class="headerlink" href="#general-format" title="Link to this heading"></a></h2>
+<h2><span class="section-number">5.1. </span>General format<a class="headerlink" href="#general-format" title="Link to this heading"></a></h2>
 <p><strong>Comments</strong>: Lines beginning with # are comments, ignored by the program but used to annotate the file for user reading it (e.g., #crystal region).</p>
 <p><strong>Tags</strong>: Each non-comment line starts with a tag (e.g., Region, -x, nTetrahedron), often followed by numerical or symbolic values.</p>
 <p><strong>Whitespace</strong>: Tags and values are separated by spaces or tabs, with consistent spacing for readability.</p>
@@ -190,7 +190,7 @@
 </ul>
 </section>
 <section id="key-characteristics">
-<h2><span class="section-number">5.3. </span>Key Characteristics<a class="headerlink" href="#key-characteristics" title="Link to this heading"></a></h2>
+<h2><span class="section-number">5.3. </span>Key characteristics<a class="headerlink" href="#key-characteristics" title="Link to this heading"></a></h2>
 <p><strong>Hierarchical Structure</strong>: The file is organized into sections (Region, Tetrahedron, Loop), each with specific parameters, allowing modular defect definitions.</p>
 <p><strong>Vector-Based Inputs</strong>: Many parameters use three-component vectors (e.g., -x, -bv, -dnorm) to define orientations and positions in 3D space.</p>
 <p><strong>Flexibility</strong>: Supports multiple defects (e.g., nTetrahedron, nLoop) with customizable attributes, making it adaptable to various simulation needs.</p>
@@ -198,7 +198,7 @@
 <p><strong>Readability</strong>: Comments and consistent formatting enhance user understanding and editing.</p>
 </section>
 <section id="purpose-and-usage">
-<h2><span class="section-number">5.4. </span>Purpose and Usage<a class="headerlink" href="#purpose-and-usage" title="Link to this heading"></a></h2>
+<h2><span class="section-number">5.4. </span>Purpose and usage<a class="headerlink" href="#purpose-and-usage" title="Link to this heading"></a></h2>
 <p>This file serves as the <code class="docutils literal notranslate"><span class="pre">parameter_file</span></code> input for CryDisGen (as described in the <a class="reference internal" href="Usage.html"><span class="doc">Usage</span></a> section), complementing the <code class="docutils literal notranslate"><span class="pre">crystal_file</span></code> by defining defects to insert into the crystal structure. It enables users to specify complex dislocation configurations, leveraging CryDisGen’s ability to generate realistic atomic-scale models.</p>
 </section>
 </section>

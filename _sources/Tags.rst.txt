@@ -66,8 +66,8 @@ Parameter tags
    -pbc   1  1  1        # boundary condition flags along x/y/z-axex: '1' for periodic, '0'for non-periodic
    -nu    0.33           # Poisson's ratio. When it is skipped, only the plastic contribution is applied, 
                          # and the elatic contribution is ignored. 
-   -rcut  1.0            # cutoff radius for deleting overlapped atoms at dislocation cores after applying displacement field. 
-                         # When it is skipped, a default value of 2.0 A is used.
+   -rcut  1.0            # cutoff radius for deleting overlapped atoms at dislocation cores after applying displacement field (Units: A). 
+                         # When it is skipped, a default value of 2.0 is used.
 
 .. important::
    Tag '-nu' is supported in **Version 2.0 and later**, and tag '-rcut' is supported in **Version 2.2.2 and later**. Unlike other tags, these two tags can be included or skipped in the parameter file, corresponding to different setups. 

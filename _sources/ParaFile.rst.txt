@@ -22,8 +22,8 @@ It is a structured ASCII text file designed to supply configuration details for 
                         # includes both plastic and elastic contributions. When omitted, only the plastic 
                         # contribution is applied.
    -rcut   1.0          # Cutoff radius. **This option is supported only in Version 2.2.2 and later.** 
-                        # used to set the cutoff radius for deleting overlapped atoms (units: A)
-                        # If it is skipped, the defautl value is 2.0 set by the code
+                        # used to set the cutoff radius for deleting overlapped atoms at dislocation cores (units: A)
+                        # If it is skipped, the default value is 2.0 set by the code
 
    #stacking fault tetrahedron
    nTetrahedron  1      # number of stacking fault tetrahedra
@@ -53,7 +53,7 @@ It is a structured ASCII text file designed to supply configuration details for 
    -bsh    1/2          # scalar coefficient of Burgers vector, e.g., 1/2 in 1/2<110>
    -f      mesh.dat     # mesh data file of the helical surface
 
-General Format
+General format
 --------------
 **Comments**: Lines beginning with # are comments, ignored by the program but used to annotate the file for user reading it (e.g., #crystal region).
 
@@ -101,7 +101,7 @@ Sections
   * *nHelix*: Specifies the number of dislocation helix (e.g., 1).
   * *Helix*:  Labels the start of a dislocation helix definition.
 
-Key Characteristics
+Key characteristics
 -------------------
 **Hierarchical Structure**: The file is organized into sections (Region, Tetrahedron, Loop), each with specific parameters, allowing modular defect definitions.
 
@@ -113,7 +113,7 @@ Key Characteristics
 
 **Readability**: Comments and consistent formatting enhance user understanding and editing.
 
-Purpose and Usage
+Purpose and usage
 -----------------
 This file serves as the ``parameter_file`` input for CryDisGen (as described in the :doc:`Usage <Usage>` section), complementing the ``crystal_file`` by defining defects to insert into the crystal structure. It enables users to specify complex dislocation configurations, leveraging CryDisGen’s ability to generate realistic atomic-scale models.
 

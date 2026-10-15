@@ -57,7 +57,7 @@ User Guide
    :numbered: 3
    :caption: Appendix:
    
-   Contact
+   Contact 
    Reference
 
 .. _webbrowser:
