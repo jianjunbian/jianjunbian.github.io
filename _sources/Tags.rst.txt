@@ -67,7 +67,7 @@ Parameter tags
    -nu    0.33           # Poisson's ratio. When it is skipped, only the plastic contribution is applied, 
                          # and the elatic contribution is ignored. 
    -rcut  1.0            # cutoff radius for deleting overlapped atoms at dislocation cores after applying displacement field. 
-                         # When it is skipped, a default value, 2.0 A, is used.
+                         # When it is skipped, a default value of 2.0 A is used.
 
 .. important::
    Tag '-nu' is supported in **Version 2.0 and later**, and tag '-rcut' is supported in **Version 2.2.2 and later**. Unlike other tags, these two tags can be included or skipped in the parameter file, corresponding to different setups. 
