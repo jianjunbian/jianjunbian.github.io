@@ -14,9 +14,9 @@ If you encounter a bug or unexpected behavior while using CryDisGen, please repo
 
 **Problem description**: A brief explanation of the issue and the circumstances under which it occurs.
 
-**Input files**:         The parameter file used to generate the model and the input crystal structure. If the size of the crystal structure file is too large, please just send some descriptions of it instead.
+**Input files**: The parameter file used to generate the model and the input crystal structure. If the size of the crystal structure file is too large, please just send some descriptions of it instead.
 
-**Error messages**:      The complete error messages or relevant output produced by the software.
+**Error messages**: The complete error messages or relevant output produced by the software.
 
 If possible, please also attach screenshots or visualization results illustrating the issue.
 
