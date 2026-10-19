@@ -171,14 +171,15 @@ These three directions together define a right-handed Cartesian coordinate syste
 <p>A dislocation loop is approximated by an <em>N</em>-vertex equilateral polygon in geometry,
 where <em>N</em> is set by ‘-ndisl’.
 The position vector of the <em>i</em>-th vertex, where <em>i</em> = 1, 2, …, <em>N</em>, can be found by rotating
-the vector (1, 0) counterclockwise by an angle of (<em>i</em>-1)*2π/<em>N</em> in the <em>xoy</em> plane. For square-shape
-dislocation, the edges are set to parallel to axis, enabling straightforward coordinate-based calculations.
+the vector (1, 0) counterclockwise by an angle of (<em>i</em>-1)*2π/<em>N</em> in the <em>xoy</em> plane. When <em>N</em> = 4, it defines a square-shape
+dislocation, the edges are set to parallel to axes of the local coordinate system, enabling straightforward coordinate-based calculations.
 If this is unnecessary in your case, the vectors
-following the tages ‘-lx, -ly’ can be simply set to ‘Null/null’ as what follows. Note that
+following the tags ‘-lx, -ly’ can be simply set to ‘Null/null’ as what follows. Note that
 the ‘Null/null’ value should be used at the same time for tags ‘-lx, -ly’. Otherwise,
 code will exit with an error.</p>
-<p>Tag ‘-ndisl’ accepts two arguments. When only a single argument is specified, the resulting dislocation loop assumes a square geometry.
-If a second argument is provided, it serves as a scaling factor for the loop edge oriented along the direction defined by the ‘-ly’ tag,
+<p>Tag ‘-ndisl’ can accept two arguments when <em>N</em> = 4 and only one argument for other values of <em>N</em>.
+If only a single argument, 4, is specified, a square-shape dislocation is defined.
+If a second argument is provided further, it serves as a scaling factor for the edge oriented along the direction specified by the ‘-ly’ tag,
 thereby enabling the generation of rectangular loop configuration. See <a class="reference internal" href="Examp_helix_combined.html"><span class="doc">Example</span></a> page</p>
 </div>
 <div class="highlight-CryDisGen notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">-lx</span>      Null

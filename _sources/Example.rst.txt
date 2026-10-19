@@ -12,6 +12,7 @@ These pages provides a series of examples of the dislocation structures created 
    Examp_helix
    Examp_helix_combined
    Examp_helix_double
+   Examp_loop3d
    Examp_loop_nested
    Examp_array_sft
    Examp_array_loop

@@ -5,9 +5,6 @@ Double helical dislocations
    :width: 85% 
    :align: center 
 
-.. code-block:: CryDisGen
-   :linenos:
-
 --------
 
 To create double dislocation helices, 
