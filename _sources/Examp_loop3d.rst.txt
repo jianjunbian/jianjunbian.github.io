@@ -1,21 +1,19 @@
 3D dislocation loop
 ==========================
 
-.. |loop3d|  image:: img/loop3d.jpg
-   :width: 80%
-   :align: bottom 
+.. image:: img/loop_3d.png
+   :width: 85%
+   :align: center 
 
-|loop3d|
-
-*( a ) a single crystal BCC Fe sample. ( b ) Triangulation mesh grid of a surface in 3D space, and pink lines are the profile of the plane. ( c ) A 3D dislocaiton loop was constructed based on geomertrical surface in ( b ).*
+*( a ) a single crystal BCC Fe sample with a dislocation loop. ( b ) Triangulation mesh grid of a surface in 3D space, and the pink profile of the surface represents the geomerty of a 3D dislocaiton loop. ( c ) The 3D dislocaiton loop in ( a ) was constructed based on geomertrical surface in ( b ).*
 
 --------
 
-As shown in abvoe figure, by using a mesh grid data file, we could construct a 3D dislocation loop in crystal. The steps are given as follows:  
+Similar to dislocation helix, by using a mesh grid data file and the 'nHelix' tag, we could construct general 3D dislocation loop (i.e., segments of the same dislocation do not have to be located on the same crystalline slip plane) in crystal as shown in the above figure. The steps are given as follows:  
 
 **Step 1:**
 
-  Use the tool in the subdirectory :doc:`tools/Bcc <Tools>` to creat an BCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: ``bcc_reg.lmp``. Use the tool in the subdirectory :doc:`tools/3DLoop <Tools>` to to create the mesh of a 3D surface: ``3dLoop.mesh``
+  Use the tool in the subdirectory :doc:`tools/Bcc <Tools>` to creat an BCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: ``bcc_reg.lmp``. Use the tool in the subdirectory :doc:`tools/Surf_3d <Tools>` to to create the mesh of a 3D surface: ``surf_3d.mesh``. Also, you can write your own data file of mesh grid based on the desired dislocation geometry, but shoud use the same data format as explained below. 
 
 .. code-block:: Shell 
    :linenos:
@@ -24,9 +22,28 @@ As shown in abvoe figure, by using a mesh grid data file, we could construct a 3
    Bcc 100 100 100 -x 1 -1 0 -y 1 1 -2 -z 1 1 1 Fe
 
    #bash
-   3DLoop -c 0 0 0 25 6 13
-   
+   Surf_3d -c 0 0 0 25 6 13
 
+--------
+
+.. admonition:: Mesh data file 
+
+   Content of data file **surf_3d.mesh**:
+
+.. code-block:: Shell 
+   :linenos:
+
+   6
+     0.000000   0.000000   0.000000
+    28.316080   4.267695  11.301374
+     3.250863  29.255168   4.181336
+     0.000000   0.000000   0.000000
+     3.250863  29.255168   4.181336
+   -21.104273  31.585975  11.602512
+   ...
+
+In the mesh data file, first line is the number of total triangular mesh grid. From the second line, the vertex x-, y-, and z-coordinates of each triangular mesh grid are printed line by line. The vertex ordering of a triangular mesh grid are determined by the direction of its face normal according to the right-hand rule.
+   
 **Step 2:**
 
   Open terminal, run the following command:
@@ -34,13 +51,16 @@ As shown in abvoe figure, by using a mesh grid data file, we could construct a 3
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file bcc_reg.lmp
+
 
 --------
 
 .. admonition::  Parameter file 
 
    Content of the :doc:`para_file <ParaFile>`:
+
 
 .. code-block:: CryDisGen
    :linenos:
@@ -58,4 +78,4 @@ As shown in abvoe figure, by using a mesh grid data file, we could construct a 3
    Helix
    -bvh   1  1  1
    -bsh   1/2
-   -f     3dLoop.mesh 
+   -f     surf_3d.mesh 

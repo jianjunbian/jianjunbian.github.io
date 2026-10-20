@@ -172,13 +172,12 @@ These three directions together define a right-handed Cartesian coordinate syste
 where <em>N</em> is set by ‘-ndisl’.
 The position vector of the <em>i</em>-th vertex, where <em>i</em> = 1, 2, …, <em>N</em>, can be found by rotating
 the vector (1, 0) counterclockwise by an angle of (<em>i</em>-1)*2π/<em>N</em> in the <em>xoy</em> plane. When <em>N</em> = 4, it defines a square-shape
-dislocation, the edges are set to parallel to axes of the local coordinate system, enabling straightforward coordinate-based calculations.
+dislocation, and the edges are set to parallel to axes of the local coordinate system, enabling straightforward coordinate-based calculations.
 If this is unnecessary in your case, the vectors
 following the tags ‘-lx, -ly’ can be simply set to ‘Null/null’ as what follows. Note that
 the ‘Null/null’ value should be used at the same time for tags ‘-lx, -ly’. Otherwise,
 code will exit with an error.</p>
-<p>Tag ‘-ndisl’ can accept two arguments when <em>N</em> = 4 and only one argument for other values of <em>N</em>.
-If only a single argument, 4, is specified, a square-shape dislocation is defined.
+<p>Tag ‘-ndisl’ can accept two arguments when <em>N</em> = 4 and only one argument for other values of <em>N</em>. If only a single argument, 4, is specified, a square-shape dislocation is defined.
 If a second argument is provided further, it serves as a scaling factor for the edge oriented along the direction specified by the ‘-ly’ tag,
 thereby enabling the generation of rectangular loop configuration. See <a class="reference internal" href="Examp_helix_combined.html"><span class="doc">Example</span></a> page</p>
 </div>

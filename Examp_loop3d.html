@@ -104,26 +104,44 @@
              
   <section id="d-dislocation-loop">
 <h1><span class="section-number">8.7. </span>3D dislocation loop<a class="headerlink" href="#d-dislocation-loop" title="Link to this heading"></a></h1>
-<p><a class="reference internal" href="_images/loop3d.jpg"><img alt="loop3d" class="align-bottom" src="_images/loop3d.jpg" style="width: 80%;" /></a></p>
-<p><em>( a ) a single crystal BCC Fe sample. ( b ) Triangulation mesh grid of a surface in 3D space, and pink lines are the profile of the plane. ( c ) A 3D dislocaiton loop was constructed based on geomertrical surface in ( b ).</em></p>
+<a class="reference internal image-reference" href="_images/loop_3d.png"><img alt="_images/loop_3d.png" class="align-center" src="_images/loop_3d.png" style="width: 85%;" />
+</a>
+<p><em>( a ) a single crystal BCC Fe sample with a dislocation loop. ( b ) Triangulation mesh grid of a surface in 3D space, and the pink profile of the surface represents the geomerty of a 3D dislocaiton loop. ( c ) The 3D dislocaiton loop in ( a ) was constructed based on geomertrical surface in ( b ).</em></p>
 <hr class="docutils" />
-<p>As shown in abvoe figure, by using a mesh grid data file, we could construct a 3D dislocation loop in crystal. The steps are given as follows:</p>
+<p>Similar to dislocation helix, by using a mesh grid data file and the ‘nHelix’ tag, we could construct general 3D dislocation loop (i.e., segments of the same dislocation do not have to be located on the same crystalline slip plane) in crystal as shown in the above figure. The steps are given as follows:</p>
 <p><strong>Step 1:</strong></p>
 <blockquote>
-<div><p>Use the tool in the subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Bcc</span></a> to creat an BCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: <code class="docutils literal notranslate"><span class="pre">bcc_reg.lmp</span></code>. Use the tool in the subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/3DLoop</span></a> to to create the mesh of a 3D surface: <code class="docutils literal notranslate"><span class="pre">3dLoop.mesh</span></code></p>
+<div><p>Use the tool in the subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Bcc</span></a> to creat an BCC single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: <code class="docutils literal notranslate"><span class="pre">bcc_reg.lmp</span></code>. Use the tool in the subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Surf_3d</span></a> to to create the mesh of a 3D surface: <code class="docutils literal notranslate"><span class="pre">surf_3d.mesh</span></code>. Also, you can write your own data file of mesh grid based on the desired dislocation geometry, but shoud use the same data format as explained below.</p>
 </div></blockquote>
 <div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">#bash</span>
 <span class="linenos">2</span>Bcc<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="w"> </span>-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-2<span class="w"> </span>-z<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>Fe
 <span class="linenos">3</span>
 <span class="linenos">4</span><span class="c1">#bash</span>
-<span class="linenos">5</span>3DLoop<span class="w"> </span>-c<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">13</span>
+<span class="linenos">5</span>Surf_3d<span class="w"> </span>-c<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">13</span>
 </pre></div>
 </div>
+<hr class="docutils" />
+<div class="admonition-mesh-data-file admonition">
+<p class="admonition-title">Mesh data file</p>
+<p>Content of data file <strong>surf_3d.mesh</strong>:</p>
+</div>
+<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="m">6</span>
+<span class="linenos">2</span><span class="w">  </span><span class="m">0</span>.000000<span class="w">   </span><span class="m">0</span>.000000<span class="w">   </span><span class="m">0</span>.000000
+<span class="linenos">3</span><span class="w"> </span><span class="m">28</span>.316080<span class="w">   </span><span class="m">4</span>.267695<span class="w">  </span><span class="m">11</span>.301374
+<span class="linenos">4</span><span class="w">  </span><span class="m">3</span>.250863<span class="w">  </span><span class="m">29</span>.255168<span class="w">   </span><span class="m">4</span>.181336
+<span class="linenos">5</span><span class="w">  </span><span class="m">0</span>.000000<span class="w">   </span><span class="m">0</span>.000000<span class="w">   </span><span class="m">0</span>.000000
+<span class="linenos">6</span><span class="w">  </span><span class="m">3</span>.250863<span class="w">  </span><span class="m">29</span>.255168<span class="w">   </span><span class="m">4</span>.181336
+<span class="linenos">7</span>-21.104273<span class="w">  </span><span class="m">31</span>.585975<span class="w">  </span><span class="m">11</span>.602512
+<span class="linenos">8</span>...
+</pre></div>
+</div>
+<p>In the mesh data file, first line is the number of total triangular mesh grid. From the second line, the vertex x-, y-, and z-coordinates of each triangular mesh grid are printed line by line. The vertex ordering of a triangular mesh grid are determined by the direction of its face normal according to the right-hand rule.</p>
 <p><strong>Step 2:</strong></p>
 <blockquote>
 <div><p>Open terminal, run the following command:</p>
 </div></blockquote>
-<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>CryDisGen<span class="w"> </span>para_file<span class="w"> </span>bcc_reg.lmp
+<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">#bash</span>
+<span class="linenos">2</span>CryDisGen<span class="w"> </span>para_file<span class="w"> </span>bcc_reg.lmp
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -144,7 +162,7 @@
 <span class="linenos">11</span><span class="k">Helix</span>
 <span class="linenos">12</span><span class="n">-bvh</span>   1  1  1
 <span class="linenos">13</span><span class="n">-bsh</span>   1/2
-<span class="linenos">14</span><span class="n">-f</span>     3dLoop.mesh
+<span class="linenos">14</span><span class="n">-f</span>     surf_3d.mesh
 </pre></div>
 </div>
 </section>

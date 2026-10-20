@@ -113,14 +113,16 @@
 <blockquote>
 <div><p>Use the tool in the subdirectory <a class="reference internal" href="Tools.html"><span class="doc">tools/Hcp</span></a> to creat an HCP single crystal sample by running the following command in Terminal. This will produce an ASCII text file of the atomic structure in current directory: <code class="docutils literal notranslate"><span class="pre">hcp_reg.lmp</span></code>.</p>
 </div></blockquote>
-<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>Hcp<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="w"> </span>-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>-1<span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-z<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>Mg
+<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">#bash</span>
+<span class="linenos">2</span>Hcp<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="m">100</span><span class="w"> </span>-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>-1<span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-y<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>-1<span class="w"> </span><span class="m">0</span><span class="w"> </span>-z<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>Mg
 </pre></div>
 </div>
 <p><strong>Step 2:</strong></p>
 <blockquote>
 <div><p>Open terminal, run the following command, and one square-shaped dislocation loop will be created on the basal slip plane.</p>
 </div></blockquote>
-<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>CryDisGen<span class="w"> </span>para_file<span class="w"> </span>hcp_reg.lmp
+<div class="highlight-Shell notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1">#bash</span>
+<span class="linenos">2</span>CryDisGen<span class="w"> </span>para_file<span class="w"> </span>hcp_reg.lmp
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -138,7 +140,7 @@
 <span class="linenos"> 8</span><span class="n">-lat</span>    3.209 5.241     <span class="c"># lattice constant</span>
 <span class="linenos"> 9</span><span class="n">-pbc</span>    1  1  1         <span class="c"># boundary condition flags along x/y/z-axex: &#39;1&#39; for pbc, &#39;0&#39; for non-pbc</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="c">#dislcoation</span>
+<span class="linenos">11</span><span class="c">#dislocation loop</span>
 <span class="linenos">12</span><span class="k">nLoop</span> 1
 <span class="linenos">13</span><span class="k">Loop</span>
 <span class="linenos">14</span><span class="n">-bv</span>     1  1 -2  0      <span class="c"># orientation of Burgers vector</span>

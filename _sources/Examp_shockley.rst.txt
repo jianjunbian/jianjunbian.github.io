@@ -18,6 +18,7 @@ To create a Shockley partial dislocation loop,
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    Fcc 100 100 100 -x 1 0 0 -y 0 1 0 -z 0 0 1 Cu
 
 **Step 2:**
@@ -27,6 +28,7 @@ To create a Shockley partial dislocation loop,
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file fcc_reg.lmp
 
 --------

@@ -29,6 +29,7 @@ To create a combination of different types of dislocations in FCC single crystal
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file fcc_reg.lmp
 
 --------

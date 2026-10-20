@@ -18,6 +18,7 @@ To create a dislocation loop withing a single-crystal magnesium (Mg) sampel, the
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    Hcp 100 100 100 -x 2 -1 -1 0 -y 0 1 -1 0 -z 0 0 0 1 Mg
 
 **Step 2:**
@@ -27,6 +28,7 @@ To create a dislocation loop withing a single-crystal magnesium (Mg) sampel, the
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file hcp_reg.lmp
 
 --------
@@ -48,7 +50,7 @@ To create a dislocation loop withing a single-crystal magnesium (Mg) sampel, the
    -lat    3.209 5.241     # lattice constant 
    -pbc    1  1  1         # boundary condition flags along x/y/z-axex: '1' for pbc, '0' for non-pbc
 
-   #dislcoation
+   #dislocation loop
    nLoop 1
    Loop
    -bv     1  1 -2  0      # orientation of Burgers vector

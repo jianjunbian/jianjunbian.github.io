@@ -32,6 +32,7 @@ To create an array of stacking fault tetrahedrons in an FCC single crystal sampl
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file fcc_reg.lmp
 
 --------

@@ -2,7 +2,7 @@ Double helical dislocations
 ===========================
 
 .. image:: img/double_helix.png
-   :width: 85% 
+   :width: 90% 
    :align: center 
 
 --------
@@ -32,6 +32,7 @@ To create double dislocation helices,
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file bcc_reg.lmp
 
 --------

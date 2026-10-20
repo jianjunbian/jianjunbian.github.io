@@ -27,6 +27,7 @@ To create a straight edge dislocation withing a single-crystal aluminum sampel, 
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    Fcc 300 300 150 -x 1 -1 0 -y 1 1 -2 -z 1 1 1 Al 
 
 **Step 2:**
@@ -36,6 +37,7 @@ To create a straight edge dislocation withing a single-crystal aluminum sampel, 
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file fcc_reg.lmp
 
 --------

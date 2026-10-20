@@ -12,7 +12,9 @@ These are the subdirectories in ``./tools``, where several useful tools are rele
 +-----------------------------+----------------------------------------------------------------------+
 | Hcp                         | Create single crystal HCP sample as inpu of CryDisGen                |
 +-----------------------------+----------------------------------------------------------------------+
-| Helical_surface             | Generate a mesh of helical surface used for dislocaiton hexlix       |
+| Helical_surface             | Generate mesh grid of a helical surface used for dislocaiton hexlix  |
++-----------------------------+----------------------------------------------------------------------+
+| Surf_3d                     | Generate mesh grid of a 3d surface used for dislocation loop         |
 +-----------------------------+----------------------------------------------------------------------+
 | ModelClip                   | Cut a cylinder out of a crystal block                                |
 +-----------------------------+----------------------------------------------------------------------+
@@ -77,6 +79,17 @@ In the ``./tools/Helical_surface`` directory, a tool provided to generate a mesh
    :align: center
 
 --------------
+
+3D surface
+---------------------
+In the ``./tools/Surf_3d`` directory, a tool provided to generate a mesh grid of a 3D surface, which is used for creating a general dislocation loop. The command-line input parameters are shown as follows:  
+
+.. image:: img/tool_surf_3d.png
+   :width: 70%
+   :align: center
+
+--------------
+
 
 Clip a crystal region
 ---------------------

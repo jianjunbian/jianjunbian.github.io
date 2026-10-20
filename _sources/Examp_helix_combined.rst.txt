@@ -29,6 +29,7 @@ To create a dislocation helix combined with a loop,
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file bcc_reg.lmp
 
 --------

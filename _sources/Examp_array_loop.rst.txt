@@ -31,6 +31,7 @@ To create an array of full dislocation loops in a BCC single crystal sample,
 .. code-block:: Shell 
    :linenos:
 
+   #bash
    CryDisGen para_file bcc_reg.lmp
 
 --------
